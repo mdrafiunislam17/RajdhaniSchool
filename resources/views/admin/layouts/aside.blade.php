@@ -50,6 +50,20 @@
         </a>
     </li>
 
+     <li class="nav-item }}
+        request()->routeIs('teacher.index') ||
+        request()->routeIs('teacher.create') ||
+        request()->routeIs('teacher.show') ||
+        request()->routeIs('teacher.edit') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('teacher.index') }}">
+             <i class="fas fa-fw fa-chalkboard-teacher"></i>
+            <span>Teacher</span>
+        </a>
+    </li>
+
+
+
+
     {{-- <li class="nav-item {{
     request()->routeIs("career.index") ||
     request()->routeIs("career.create") ||

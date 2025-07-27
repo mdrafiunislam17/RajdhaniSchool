@@ -26,9 +26,10 @@ class FrontController extends Controller
 
     public function aboutUs($title = null)
     {
-        $about = About::first(); // or however you're fetching the about page
+        $about = About::first();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
 
-        return view('front.about', compact('about'));
+        return view('front.about', compact('about','settings'));
     }
 
 }
