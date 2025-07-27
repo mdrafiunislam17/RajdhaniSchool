@@ -1,13 +1,13 @@
 @extends("admin.layouts.master")
-@section("title", "achievements")
+@section("title", "Teacher")
 @section("content")
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">achievements</h1>
-            <a href="{{ route("achievements.create") }}"
+            <h1 class="h3 mb-0 text-gray-800">Teacher</h1>
+            <a href="{{ route("teacher.create") }}"
                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-plus fa-sm text-white-50"></i> Create achievements</a>
+                    class="fas fa-plus fa-sm text-white-50"></i> Create teacher</a>
         </div>
 
         @if (session()->has("success"))
@@ -36,22 +36,26 @@
                         <tr>
                             <th>#SL</th>
                             <th>Name</th>
-                            <th>Icon</th>
+                            <th>Position</th>
+                            <th>Phone</th>
+                            <th>Image</th>
                             <th>Status</th>
                             <th style="width: 100px">Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach( $achievements as $i => $achievement)
+                        @foreach( $teacher as $i => $item)
                             <tr>
                                 <td>{{ ++$i }}</td>
-                                <td>{{ $achievement->name }}</td>
+                                <td>{{ $item->name }}</td>
+                                <td>{{ $item->position }}</td>
+                                <td>{{ $item->phone }}</td>
                                 <td>
-                                    <img src="{{ asset('uploads/achievement/' . $achievement->icon) }}" width="100" alt="Achievement Icon">
+                                    <img src="{{ asset('uploads/teacher/' . $item->image) }}" width="100" alt="item Icon">
 
                                 </td>
                                 <td>
-                                    @if ($achievement->status == 1)
+                                    @if ($item->status == 1)
                                         <span class="badge badge-success badge-counter">Active</span>
                                     @else
                                         <span class="badge badge-danger badge-counter">Inactive</span>
@@ -61,12 +65,12 @@
                                 <td>
                                     {{--                                    <a href="{{ route("$clients.show", $client->id) }}" class="btn btn-sm"><i--}}
                                     {{--                                            class="fa fa-eye"></i></a>--}}
-                                    <a href="{{ route("achievements.edit", $achievement->id) }}" class="btn btn-sm btn-warning"><i
+                                    <a href="{{ route("teacher.edit", $item->id) }}" class="btn btn-sm btn-warning"><i
                                             class="fa fa-edit"></i></a>
-                                    <form action="{{ route('achievements.destroy', $achievement->id) }}" method="post" class="d-inline delete-form" data-id="{{ $achievement->id }}">
+                                    <form action="{{ route('teacher.destroy', $item->id) }}" method="post" class="d-inline delete-form" data-id="{{ $item->id }}">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="button" class="btn btn-sm btn-danger delete-btn h-100" data-id="{{ $achievement->id }}">
+                                        <button type="button" class="btn btn-sm btn-danger delete-btn h-100" data-id="{{ $item->id }}">
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
@@ -93,7 +97,7 @@
                     {{--                --}}
                 </div>
                 <div class="modal-body text-center">
-                    <p class="fs-5">Are you sure you want to delete this Client?</p>
+                    <p class="fs-5">Are you sure you want to delete this Item?</p>
                     <i class="fa fa-exclamation-triangle fa-2x text-warning"></i>
                 </div>
                 <div class="modal-footer justify-content-center">

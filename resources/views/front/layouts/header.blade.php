@@ -35,10 +35,18 @@
 
     <!-- bottom header -->
     <div class="px-[30px] xxl:px-[15px] lg:px-[20px] py-[28px] lg:py-[18px] flex justify-between to-be-fixed">
-        <div class="logo xxs:max-w-[40%]">
-            <a href="{{route('front.index')}}">
-                <img src="{{ asset("uploads/" . $settings["SETTING_SITE_LOGO"]) }}" alt="logo" class="logo">
-            </a></div>
+        <div class="logo flex items-center gap-2 xxs:max-w-[40%]">
+            <a href="{{ route('front.index') }}" class="flex items-center">
+                <img src="{{ asset('uploads/' . $settings['SETTING_SITE_LOGO']) }}" alt="logo" class="h-[50px]" />
+                <span class="ml-2 text-base font-semibold">
+                <span style="color: #dc2626;">RAJDHANI </span>
+                <span style="color: #16a34a;"> SCHOOL AND COLLEGE</span>
+
+                </span>
+            </a>
+        </div>
+
+
 
         <div class="flex lg:items-center lg:gap-[60px] xxs:gap-[30px]">
             <div class="flex items-center gap-[100px] xl:gap-[30px] lg:gap-y-0">
@@ -46,14 +54,14 @@
                 <div class="ed-header-nav-container">
                     <ul class="to-go-to-sidebar-in-mobile ed-header-nav flex lg:flex-col gap-x-[43px] xl:gap-x-[33px] font-kanit text-[17px]  font-normal" style="padding-right: 155px ;">
                         <li class="has-sub-menu relative">
-                            <a role="button">Home</a>
+                            <a href="{{route('front.index')}}" role="button">Home</a>
 
 {{--                            <ul class="ed-header-submenu">--}}
 {{--                                <li><a href="index.html">Home</a></li>--}}
 {{--                                <li><a href="index-2.html">Home 02</a></li>--}}
 {{--                            </ul>--}}
                         </li>
-                        <li><a href="#">About us</a></li>
+                        <li><a href="{{route('aboutUs')}}">About us</a></li>
                         <li class="has-sub-menu relative">
                             <a role="button">Courses</a>
 
