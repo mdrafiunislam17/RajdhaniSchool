@@ -63,6 +63,19 @@
 
 
 
+     <li class="nav-item }}
+        request()->routeIs('gallery.index') ||
+        request()->routeIs('gallery.create') ||
+        request()->routeIs('gallery.show') ||
+        request()->routeIs('gallery.edit') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('gallery.index') }}">
+             <i class="fas fa-fw fa-photo-video"></i>
+            <span>Gallery</span>
+        </a>
+    </li>
+
+
+
 
     {{-- <li class="nav-item {{
     request()->routeIs("career.index") ||
