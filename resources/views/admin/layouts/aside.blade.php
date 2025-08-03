@@ -74,6 +74,19 @@
         </a>
     </li>
 
+       <li class="nav-item }}
+        request()->routeIs('class.index') ||
+        request()->routeIs('class.create') ||
+        request()->routeIs('class.show') ||
+        request()->routeIs('class.edit') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('class.index') }}">
+             <i class="fas fa-fw fa-school"></i>
+
+            <span>class</span>
+        </a>
+    </li>
+
+
 
 
 

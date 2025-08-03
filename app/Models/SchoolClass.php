@@ -9,23 +9,9 @@ class SchoolClass extends Model
 {
     use HasFactory;
 
+       protected $fillable = [
 
-      protected $fillable = [
-        'teacher_id',
-        'description',
-        'level',
-        'duration',
-        'students',
-        'lessons',
-        'image',
+        "name",
+        "status",
     ];
-
-    /**
-     * Get the teacher that owns the class.
-     */
-    public function teacher()
-    {
-        return $this->belongsTo(Teacher::class);
-    }
-
 }

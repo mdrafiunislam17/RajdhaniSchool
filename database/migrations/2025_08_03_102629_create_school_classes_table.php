@@ -13,15 +13,8 @@ return new class extends Migration
     {
         Schema::create('school_classes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('teacher_id')
-                ->constrained('teachers')
-                ->onDelete('cascade');
-            $table->text('description')->nullable();
-            $table->string('level');
-            $table->string('duration');
-            $table->string('students');
-            $table->string('lessons');
-            $table->string("image");
+            $table->string('name');
+            $table->tinyInteger("status")->default(1);
             $table->timestamps();
         });
     }

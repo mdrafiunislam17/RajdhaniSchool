@@ -317,99 +317,6 @@
         <!-- TEACHER SECTION END -->
 
 
-        <!-- CLASSES SECTION START -->
-        <section class="py-[120px] xl:py-[80px] md:py-[60px] bg-[url('../assets/img/classes-bg.jpg')] bg-cover bg-top bg-no-repeat">
-            <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-                <!-- section heading -->
-                <div class="text-center mb-[46px] lg:mb-[36px] xxs:mb-[26px]">
-                    <h6 class="ed-section-sub-title">academic classes</h6>
-                    <h2 class="ed-section-title">Edutics academic classes</h2>
-                </div>
-
-                <!-- cards -->
-                <div class="grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 xs:max-w-[80%] xxs:max-w-full mx-auto gap-[30px] lg:gap-[20px]">
-                    <!-- single class card -->
-                    <div class="bg-[url('../assets/img/class-bg.png')] bg-no-repeat bg-center bg-[length:100%_100%] p-[25px] sm:p-[20px]">
-                        <div class="mb-[22px]">
-                            <img src="{{asset('assets/img/english .jpg')}}" alt="class image" class="aspect-[161/108] object-cover w-full">
-                        </div>
-                        <!-- txt -->
-                        <div>
-                            <h5 class="font-semibold text-[20px] text-edblue mb-[8px]"><a href="#" class="hover:text-edpurple">English Classes</a></h5>
-                            <p class="text-edgray mb-[15px]">Nulla a auctor leo. Vestibulum viverra mattis arcu nec viverra. Vivamus </p>
-                            <!-- infos -->
-                            <div class="flex gap-x-[20px] sm:flex-wrap justify-between sm:justify-start pt-[17px] border-t border-dashed border-edyellow">
-                                <div class="font-semibold">
-                                    <span class="text-[14px] text-edyellow">Age</span>
-                                    <h6>3-5 years</h6>
-                                </div>
-                                <div class="font-semibold">
-                                    <span class="text-[14px] text-edyellow">Weekly </span>
-                                    <h6>5 Days</h6>
-                                </div>
-                                <div class="font-semibold">
-                                    <span class="text-[14px] text-edyellow">Time</span>
-                                    <h6>4.30 Hrs</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single class card -->
-                    <div class="bg-[url('../assets/img/class-bg.png')] bg-no-repeat bg-center bg-[length:100%_100%] p-[25px] sm:p-[20px]">
-                        <div class="mb-[22px]">
-                            <img src="{{asset('assets/img/math.jpg')}}" alt="class image" class="aspect-[161/108] object-cover w-full">
-                        </div>
-                        <!-- txt -->
-                        <div>
-                            <h5 class="font-semibold text-[20px] text-edblue mb-[8px]"><a href="#" class="hover:text-edpurple">Marathi </a></h5>
-                            <p class="text-edgray mb-[15px]">Nulla a auctor leo. Vestibulum viverra mattis arcu nec viverra. Vivamus </p>
-                            <!-- infos -->
-                            <div class="flex gap-x-[20px] sm:flex-wrap justify-between sm:justify-start pt-[17px] border-t border-dashed border-edyellow">
-                                <div class="font-semibold">
-                                    <span class="text-[14px] text-edyellow">Age</span>
-                                    <h6>3-5 years</h6>
-                                </div>
-                                <div class="font-semibold">
-                                    <span class="text-[14px] text-edyellow">Weekly </span>
-                                    <h6>5 Days</h6>
-                                </div>
-                                <div class="font-semibold">
-                                    <span class="text-[14px] text-edyellow">Time</span>
-                                    <h6>4.30 Hrs</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single class card -->
-                    <div class="bg-[url('../assets/img/class-bg.png')] bg-no-repeat bg-center bg-[length:100%_100%] p-[25px] sm:p-[20px]">
-                        <div class="mb-[22px]">
-                            <img src="{{asset('assets/img/science .png')}}" alt="class image" class="aspect-[161/108] object-cover w-full">
-                        </div>
-                        <!-- txt -->
-                        <div>
-                            <h5 class="font-semibold text-[20px] text-edblue mb-[8px]"><a href="#" class="hover:text-edpurple">Tutoring Online</a></h5>
-                            <p class="text-edgray mb-[15px]">Nulla a auctor leo. Vestibulum viverra mattis arcu nec viverra. Vivamus </p>
-                            <!-- infos -->
-                            <div class="flex gap-x-[20px] sm:flex-wrap justify-between sm:justify-start pt-[17px] border-t border-dashed border-edyellow">
-                                <div class="font-semibold">
-                                    <span class="text-[14px] text-edyellow">Age</span>
-                                    <h6>3-5 years</h6>
-                                </div>
-                                <div class="font-semibold">
-                                    <span class="text-[14px] text-edyellow">Weekly </span>
-                                    <h6>5 Days</h6>
-                                </div>
-                                <div class="font-semibold">
-                                    <span class="text-[14px] text-edyellow">Time</span>
-                                    <h6>4.30 Hrs</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- CLASSES SECTION END -->
 
 
         <!-- ADMISSION PROCESS SECTION START -->
@@ -582,7 +489,7 @@
 
 
         <!-- SERVICES SECTION START -->
-        <section class="py-[120px] xl:py-[80px] md:py-[60px] relative z-[1] overflow-hidden">
+        {{-- <section class="py-[120px] xl:py-[80px] md:py-[60px] relative z-[1] overflow-hidden">
             <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
                 <div class="flex md:flex-col gap-[45px] items-center">
                     <div>
@@ -653,7 +560,7 @@
                 <img src="assets/img/service-vector-1.svg" alt="vector" class="absolute -z-[1] bottom-[140px] left-[45px]">
                 <img src="assets/img/form-notice-vector-1.svg" alt="vector" class="absolute -z-[1] top-[140px] right-[40px]">
             </div>
-        </section>
+        </section> --}}
         <!-- SERVICES SECTION END -->
 
 
