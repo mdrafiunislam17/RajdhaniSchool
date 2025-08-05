@@ -2,10 +2,15 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdmissionController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\classController;
+use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\NoticeController;
+use App\Http\Controllers\Admin\ResultController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +45,11 @@ Route::resource('teacher',TeacherController::class);
 Route::resource('gallery',GalleryController::class);
 Route::resource('class',classController::class);
 Route::resource('admission',AdmissionController::class);
+Route::resource('student',StudentController::class);
+Route::resource('notice',NoticeController::class);
+Route::resource('result',ResultController::class);
+Route::resource("blogs", BlogController::class);
+Route::resource("events", EventController::class);
 Route::get("settings", [SettingController::class, "index"])->name("setting.index");
 Route::put("settings", [SettingController::class, "update"])->name("setting.update");
 

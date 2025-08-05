@@ -7,7 +7,7 @@
             <h1 class="h3 mb-0 text-gray-800">Edit Event</h1>
             <a href="{{ route("events.index") }}"
                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                        class="fas fa-eye fa-sm text-white-50"></i> Events</a>
+                    class="fas fa-eye fa-sm text-white-50"></i> Events</a>
         </div>
 
         @if ($errors->any())
@@ -41,119 +41,110 @@
             </div>
         @endif
 
-        <!-- DataTales Example -->
+        <!-- Form -->
         <div class="card shadow mb-4">
             <div class="card-body">
-                <form action="{{ route("events.update", $event->id) }}" method="post"
-                      enctype="multipart/form-data">
+                <form action="{{ route("events.update", $event->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method("PUT")
+
+                    <!-- Event Name -->
                     <div class="form-group row">
-                        <label for="event_name" class="col-sm-3 col-form-label text-right font-weight-bold">Event Name
-                            *</label>
+                        <label for="event_name" class="col-sm-3 col-form-label text-right font-weight-bold">Event Name *</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="event_name" value="{{ $event->event_name }}"
-                                   name="event_name"
-                                   autofocus>
+                            <input type="text" class="form-control" id="event_name" name="event_name" value="{{ $event->event_name }}" autofocus>
                         </div>
                     </div>
 
+                    <!-- Location -->
                     <div class="form-group row">
-                        <label for="location" class="col-sm-3 col-form-label text-right font-weight-bold">Location
-                            *</label>
+                        <label for="location" class="col-sm-3 col-form-label text-right font-weight-bold">Location *</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="location" value="{{ $event->location }}"
-                                   name="location">
+                            <input type="text" class="form-control" id="location" name="location" value="{{ $event->location }}">
                         </div>
                     </div>
 
+                    <!-- Date -->
                     <div class="form-group row">
-                        <label for="event_date" class="col-sm-3 col-form-label text-right font-weight-bold">Date
-                            *</label>
+                        <label for="event_date" class="col-sm-3 col-form-label text-right font-weight-bold">Date *</label>
                         <div class="col-sm-6">
-                            <input type="date" class="form-control" id="event_date" value="{{ $event->event_date }}"
-                                   name="event_date">
+                            <input type="date" class="form-control" id="event_date" name="event_date" value="{{ $event->event_date }}">
                         </div>
                     </div>
 
+                    <!-- Start Time -->
                     <div class="form-group row">
-                        <label for="start_time" class="col-sm-3 col-form-label text-right font-weight-bold">Start Time
-                            *</label>
+                        <label for="start_time" class="col-sm-3 col-form-label text-right font-weight-bold">Start Time *</label>
                         <div class="col-sm-6">
-                            <input type="time" class="form-control" id="start_time" value="{{ $event->start_time }}"
-                                   name="start_time">
+                            <input type="time" class="form-control" id="start_time" name="start_time" value="{{ $event->start_time }}">
                         </div>
                     </div>
 
+                    <!-- End Time -->
                     <div class="form-group row">
-                        <label for="end_time" class="col-sm-3 col-form-label text-right font-weight-bold">End Time
-                            *</label>
+                        <label for="end_time" class="col-sm-3 col-form-label text-right font-weight-bold">End Time *</label>
                         <div class="col-sm-6">
-                            <input type="time" class="form-control" id="end_time" value="{{ $event->end_time }}"
-                                   name="end_time">
+                            <input type="time" class="form-control" id="end_time" name="end_time" value="{{ $event->end_time }}">
                         </div>
                     </div>
 
+                    <!-- Email -->
                     <div class="form-group row">
                         <label for="email" class="col-sm-3 col-form-label text-right font-weight-bold">Email *</label>
                         <div class="col-sm-6">
-                            <input type="email" class="form-control" id="email" value="{{ $event->email }}"
-                                   name="email">
+                            <input type="email" class="form-control" id="email" name="email" value="{{ $event->email }}">
                         </div>
                     </div>
 
+                    <!-- Phone -->
                     <div class="form-group row">
                         <label for="phone" class="col-sm-3 col-form-label text-right font-weight-bold">Phone *</label>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control" id="phone" value="{{ $event->phone }}"
-                                   name="phone">
+                            <input type="text" class="form-control" id="phone" name="phone" value="{{ $event->phone }}">
                         </div>
                     </div>
 
+                    <!-- Existing Image -->
                     <div class="form-group row">
-                        <label for="image"
-                               class="col-sm-3 col-form-label text-right font-weight-bold">Existing Image</label>
+                        <label class="col-sm-3 col-form-label text-right font-weight-bold">Existing Image</label>
                         <div class="col-sm-6">
-                            <img src="{{ asset("uploads/event/$event->image") }}" width="120"
-                                 alt="{{ $event->image }}">
+                            <img src="{{ asset("uploads/event/$event->image") }}" width="120" alt="{{ $event->image }}">
                         </div>
                     </div>
 
+                    <!-- Upload Image -->
                     <div class="form-group row">
-                        <label for="image"
-                               class="col-sm-3 col-form-label text-right font-weight-bold">Image *</label>
+                        <label for="image" class="col-sm-3 col-form-label text-right font-weight-bold">Image *</label>
                         <div class="col-sm-6">
                             <input type="file" class="form-control" id="image" name="image">
                         </div>
                     </div>
 
+                    <!-- Short Description -->
                     <div class="form-group row">
-                        <label for="short_description"
-                               class="col-sm-3 col-form-label text-right font-weight-bold">Short Description *</label>
+                        <label for="short_description" class="col-sm-3 col-form-label text-right font-weight-bold">Short Description *</label>
                         <div class="col-sm-6">
-                            <textarea name="short_description" id="short_description"
-                                      class="form-control" @style(["height: 160px"])>{{ $event->short_description }}</textarea>
+                            <textarea name="short_description" id="short_description" class="form-control" style="height: 160px">{{ $event->short_description }}</textarea>
                         </div>
                     </div>
 
+                    <!-- Description -->
                     <div class="form-group row">
-                        <label for="description"
-                               class="col-sm-3 col-form-label text-right font-weight-bold">Description *</label>
+                        <label for="description" class="col-sm-3 col-form-label text-right font-weight-bold">Description *</label>
                         <div class="col-sm-6">
-                            <textarea name="description" id="description"
-                                      class="form-control">{{ $event->description }}</textarea>
+                            <textarea name="description" id="description" class="form-control">{{ $event->description }}</textarea>
                         </div>
                     </div>
 
+                    <!-- Location Map -->
                     <div class="form-group row">
-                        <label for="location_map"
-                               class="col-sm-3 col-form-label text-right font-weight-bold">Location (Google Map)</label>
+                        <label for="location_map" class="col-sm-3 col-form-label text-right font-weight-bold">Location (Google Map)</label>
                         <div class="col-sm-6">
-                            <textarea name="location_map" id="location_map"
-                                      class="form-control" @style(["height: 160px"])>{{ $event->location_map }}</textarea>
+                            <textarea name="location_map" id="location_map" class="form-control" style="height: 160px">{{ $event->location_map }}</textarea>
                         </div>
                     </div>
 
+                    <!-- Status -->
                     <div class="form-group row">
                         <label for="status" class="col-sm-3 col-form-label text-right font-weight-bold">Status</label>
                         <div class="col-sm-6">
@@ -164,81 +155,79 @@
                         </div>
                     </div>
 
-                    <hr>
+                    <!-- Existing Gallery -->
+{{--                    <div class="form-group row">--}}
+{{--                        <label class="col-sm-3 col-form-label text-right font-weight-bold">Exist Gallery</label>--}}
+{{--                        <div class="col-sm-6">--}}
+{{--                            <table class="table table-sm table-bordered">--}}
+{{--                                <thead>--}}
+{{--                                <tr>--}}
+{{--                                    <th>SL</th>--}}
+{{--                                    <th>Image</th>--}}
+{{--                                    <th>Action</th>--}}
+{{--                                </tr>--}}
+{{--                                </thead>--}}
+{{--                                <tbody>--}}
+{{--                                @php--}}
+{{--                                    $gallery = is_array($event->gallery) ? $event->gallery : json_decode($event->gallery, true);--}}
+{{--                                @endphp--}}
 
-                    <div class="form-group row">
-                        <label for="gallery" class="col-sm-3 col-form-label text-right font-weight-bold">Exist
-                            Gallery</label>
-                        <div class="col-sm-6">
-                            <table class="table table-sm table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>SL</th>
-                                    <th>Image</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
+{{--                                @if (!empty($gallery) && is_array($gallery))--}}
+{{--                                    @foreach($gallery as $i => $image)--}}
+{{--                                        <tr id="gallery_item_{{ $i + 1 }}">--}}
+{{--                                            <td>--}}
+{{--                                                <input type="hidden" name="hidden_gallery[]" value="{{ $image }}">--}}
+{{--                                                {{ $i + 1 }}--}}
+{{--                                            </td>--}}
+{{--                                            <td><img src="{{ asset("uploads/gallery/$image") }}" width="100" alt="{{ $image }}"></td>--}}
+{{--                                            <td style="width: 50px">--}}
+{{--                                                <button type="button" onclick="document.getElementById('gallery_item_{{ $i + 1 }}').remove()" class="btn btn-sm btn-danger">--}}
+{{--                                                    <i class="fa fa-times"></i>--}}
+{{--                                                </button>--}}
+{{--                                            </td>--}}
+{{--                                        </tr>--}}
+{{--                                    @endforeach--}}
+{{--                                @else--}}
+{{--                                    <tr>--}}
+{{--                                        <td colspan="3" class="text-center">Image not exist</td>--}}
+{{--                                    </tr>--}}
+{{--                                @endif--}}
+{{--                                </tbody>--}}
+{{--                            </table>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
-                                <tbody>
-                                @if (empty($event->gallery))
-                                    <tr>
-                                        <td colspan="3" class="text-center">Image not exist</td>
-                                    </tr>
-                                @else
-                                  @foreach($event->gallery as $i => $image)
-                                    <tr id="gallery_item_{{ ++$i }}">
-                                        <td>
-                                            <input type="hidden" name="hidden_gallery[]" value="{{ $image }}">
-                                            {{ $i }}
-                                        </td>
-                                        <td><img src="{{ asset("uploads/gallery/$image") }}" width="100" alt="{{ $image }}"></td>
-                                        <td style="width: 50px">
-                                            <button type="button" onclick="document.getElementById('gallery_item_{{ $i }}').remove()" class="btn btn-sm btn-danger">
-                                                <i class="fa fa-times"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                @endforeach
-
-                                @endif
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
+                    <!-- Upload New Gallery -->
                     <div class="form-group row">
                         <label for="gallery" class="col-sm-3 col-form-label text-right font-weight-bold">Gallery</label>
                         <div class="col-sm-6">
-                            <input type="file" name="gallery[]" id="gallery" class="form-control" multiple
-                                   accept="image/*">
-                            <small class="form-text text-muted">Multiple images support</small>
+                            <input type="file" name="gallery[]" id="gallery" class="form-control" multiple accept="image/*">
+                            <small class="form-text text-muted">Multiple images supported</small>
                         </div>
                     </div>
 
-
+                    <!-- Submit -->
                     <div class="form-group row">
                         <div class="offset-3 col-sm-6">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
+
                 </form>
             </div>
         </div>
-
     </div>
 @endsection
 
 @push("scripts")
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js" referrerpolicy="origin"></script>
-
     <script>
         tinymce.init({
-            selector: '#description',  // Use textarea as the editor
-            height: 300,           // Set the height of the editor
+            selector: '#description',
+            height: 300,
             plugins: 'advlist autolink lists link image charmap print preview anchor',
             toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | image link',
             menubar: false,
         });
     </script>
-
 @endpush

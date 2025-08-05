@@ -47,7 +47,10 @@
                         @foreach($blogs as $i => $blog)
                             <tr>
                                 <td>{{ ++$i }}</td>
-                                <td><img src="{{ asset("uploads/blog/$blog->image") }}" width="100" alt=""></td>
+                                <td>
+                                    <img src="{{ asset('uploads/blog/' . $blog->image) }}" width="100" alt="">
+
+                                </td>
                                 <td>{{ $blog->title }}</td>
                                 <td>{{ $blog->posted_by }}</td>
                                 <td>{{ date("Y-m-d h:i A", strtotime($blog->posted_on)) }}</td>

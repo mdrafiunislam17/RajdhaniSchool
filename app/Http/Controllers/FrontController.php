@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Setting;
 use App\Models\Slider;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -21,7 +22,12 @@ class FrontController extends Controller
         $sliders = Slider::where('status', 1)->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         $about = About::latest()->first();
-        return view('front.index',compact('sliders','settings','about'));
+        $teacher = Teacher::query()
+                    ->where("status", 1)
+                    ->latest()
+                    ->get();
+
+        return view('front.index',compact('sliders','settings','about','teacher'));
     }
 
     public function aboutUs($title = null)

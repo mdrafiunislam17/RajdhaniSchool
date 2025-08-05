@@ -72,33 +72,33 @@
             <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
                 <div class="grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px]">
                     <!-- single feature -->
-                    <div class="bg-[#FAF9F6] hover:bg-edyellow border-t-[7px] border-edyellow hover:border-edpurple duration-[400ms] p-[30px] sm:p-[25px] group relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/faeture-bg.jpg')] before:mix-blend-hard-light before:opacity-0 before:duration-[400ms] hover:before:opacity-15">
+                    <div class="bg-[#FAF9F6] hover:bg-edgreen border-t-[7px] border-edred hover:border-edpurple duration-[400ms] p-[30px] sm:p-[25px] group relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/faeture-bg.jpg')] before:mix-blend-hard-light before:opacity-0 before:duration-[400ms] hover:before:opacity-15">
                         <span class="icon">
                             <img src="assets/img/feature-1.svg" alt="feature" class="mb-[11px]">
                         </span>
                         <h4 class="font-semibold text-[24px] xl:text-[22px] mb-[3px] text-edblue"><a href="#" class="hover:text-edpurple">School Life</a></h4>
                         <p class="text-edgray2 group-hover:text-black mb-[18px]">Eimply dummy text printing ypese tting industry. Ipsum has been the</p>
-                        <a href="#" class="text-edblue hover:text-edpurple"><span class="text-[14px]"><i class="fa-solid fa-angle-right"></i></span> View More</a>
+{{--                        <a href="#" class="text-edblue hover:text-edpurple"><span class="text-[14px]"><i class="fa-solid fa-angle-right"></i></span> View More</a>--}}
                     </div>
 
                     <!-- single feature -->
-                    <div class="bg-[#FAF9F6] hover:bg-edyellow border-t-[7px] border-edyellow hover:border-edpurple duration-[400ms] p-[30px] sm:p-[25px] group relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/faeture-bg.jpg')] before:mix-blend-hard-light before:opacity-0 before:duration-[400ms] hover:before:opacity-15">
-                        <span class="icon">
+                    <div class="bg-[#FAF9F6] hover:bg-edgreen border-t-[7px] border-edred hover:border-edpurple duration-[400ms] p-[30px] sm:p-[25px] group relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/faeture-bg.jpg')] before:mix-blend-hard-light before:opacity-0 before:duration-[400ms] hover:before:opacity-15">
+                      <span class="icon">
                             <img src="assets/img/feature-2.svg" alt="feature" class="mb-[11px]">
                         </span>
                         <h4 class="font-semibold text-[24px] xl:text-[22px] mb-[3px] text-edblue"><a href="#" class="hover:text-edpurple">Academics </a></h4>
                         <p class="text-black group-hover:text-black mb-[18px]">Eimply dummy text printing ypese tting industry. Ipsum has been the</p>
-                        <a href="#" class="text-edblue hover:text-edpurple"><span class="text-[14px]"><i class="fa-solid fa-angle-right"></i></span> View More</a>
+{{--                        <a href="#" class="text-edblue hover:text-edpurple"><span class="text-[14px]"><i class="fa-solid fa-angle-right"></i></span> View More</a>--}}
                     </div>
 
                     <!-- single feature -->
-                    <div class="bg-[#FAF9F6] hover:bg-edyellow border-t-[7px] border-edyellow hover:border-edpurple duration-[400ms] p-[30px] sm:p-[25px] group relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/faeture-bg.jpg')] before:mix-blend-hard-light before:opacity-0 before:duration-[400ms] hover:before:opacity-15">
-                        <span class="icon">
+                    <div class="bg-[#FAF9F6] hover:bg-edgreen border-t-[7px] border-edred hover:border-edpurple duration-[400ms] p-[30px] sm:p-[25px] group relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/faeture-bg.jpg')] before:mix-blend-hard-light before:opacity-0 before:duration-[400ms] hover:before:opacity-15">
+                      <span class="icon">
                             <img src="assets/img/feature-3.svg" alt="feature" class="mb-[11px]">
                         </span>
                         <h4 class="font-semibold text-[24px] xl:text-[22px] mb-[3px] text-edblue"><a href="#" class="hover:text-edpurple">Community</a></h4>
                         <p class="text-edgray2 group-hover:text-black mb-[18px]">Eimply dummy text printing ypese tting industry. Ipsum has been the</p>
-                        <a href="#" class="text-edblue hover:text-edpurple"><span class="text-[14px]"><i class="fa-solid fa-angle-right"></i></span> View More</a>
+{{--                        <a href="#" class="text-edblue hover:text-edpurple"><span class="text-[14px]"><i class="fa-solid fa-angle-right"></i></span> View More</a>--}}
                     </div>
                 </div>
             </div>
@@ -122,9 +122,9 @@
 
                             <!-- vectors -->
                             <div>
-                                <img src="assets/img/about-2-img-vector.svg" alt="vector" class="absolute pointer-events-none top-[60px] right-[65px] -z-[1]">
+{{--                                <img src="assets/img/about-2-img-vector.svg" alt="vector" class="absolute pointer-events-none top-[60px] right-[65px] -z-[1]">--}}
 
-                                <img src="assets/img/about-2-img-vector-2.svg" alt="vector" class="absolute pointer-events-none -bottom-[30px] right-0 -z-[1] md:hidden">
+{{--                                <img src="assets/img/about-2-img-vector-2.svg" alt="vector" class="absolute pointer-events-none -bottom-[30px] right-0 -z-[1] md:hidden">--}}
 
                             </div>
                         </div>
@@ -132,16 +132,23 @@
 
                     <!-- right -->
                     <div class="max-w-[54%] md:max-w-full">
-                        <h6 class="ed-section-sub-title">About us</h6>
-                        <h2 class="ed-section-title mb-[6px]">
-                            <span class="inline-block font-bold relative before:absolute before:left-0 before:top-[calc(100%-6px)] before:w-[137px] before:h-[14px] before:bg-[url('../assets/img/banner-2-title-vector.svg')] before:bg-[length:100%_100%]">
+                        <h6 class="text-green text-[18px] font-semibold uppercase tracking-wide mb-2">About us</h6>
 
-                            </span> {{$about->title}}</h2>
-{{--                        <p class="text-edgray mb-[34px]">--}}
+                        <h2 class="text-green text-[25px] mb-[6px] font-bold relative inline-block">
+                            {{ $about->title }}
+                        </h2>
+                        <img src="{{ asset('assets/img/banner-2-title.jpg') }}"
+                             alt="underline"
+                             class=" mt-[-10px]" style="
+                                height: 10px;
+                                margin-top: -20px;
+                            ">
+
+                        {{--                        <p class="text-edgray mb-[34px]">--}}
 {{--                            {!! $about->description !!}--}}
 {{--                        </p>--}}
 
-                        <p class="text-edgray mb-[34px]">
+                        <p class="text-green pl-[40px] mb-[34px]">
                             {!! \Illuminate\Support\Str::limit(strip_tags($about->description), 350, '...') !!}
                         </p>
 
@@ -151,72 +158,11 @@
 {{--                            <li>Expert mentors</li>--}}
 {{--                            <li>Lifetime Access</li>--}}
 {{--                        </ul>--}}
-                        <a href="{{route('aboutUs')}}" class="ed-btn">know more</a>
+                        <a href="{{route('aboutUs')}}" class="ed-btn" style="background-color: green">know more</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ABOUT SECTION END -->
-        <!-- ABOUT SECTION START -->
-{{--        <section class="py-[120px] xl:py-[80px] md:py-[60px]">--}}
-{{--            <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">--}}
-{{--                <div class="flex md:flex-col justify-between items-center gap-x-[60px] xl:gap-x-[40px] gap-y-[40px]">--}}
-{{--                    <!-- img -->--}}
-{{--                    <div class="max-w-[50%] md:max-w-full grow relative">--}}
-{{--                        <img src="assets/img/about-img.png" alt="about image">--}}
-{{--                        <img src="assets/img/about-img-vector.svg" alt="vector" class="absolute -top-[25px] left-[25px] -z-[1] w-[90%] max-w-[100%]">--}}
-{{--                    </div>--}}
-
-{{--                    <!-- txt -->--}}
-{{--                    <div class="max-w-[50%] md:max-w-full shrink-0 grow">--}}
-{{--                        <h6 class="ed-section-sub-title">about us</h6>--}}
-{{--                        <h2 class="ed-section-title mb-[9px]">Welcome to best school for your child</h2>--}}
-{{--                        <p class="text-edgray">luctus. Curabitur nibh justo imperdiet non ex non tempus faucibus urna Aliquam at elit vitae dui sagittis maximus eget vitae diam In fermentum </p>--}}
-{{--                        <!-- infos -->--}}
-{{--                        <div class="flex xs:flex-col gap-y-[15px] gap-x-[30px] xxl:gap-x-[20px] mt-[16px] xxs:mb-[30px] pb-[30px] border-b border-[#dbdbdb] mb-[26px]">--}}
-{{--                            <!-- single info -->--}}
-{{--                            <div class="flex items-center lg:flex-col lg:items-start md:flex-row md:items-center gap-[20px] xl:gap-[15px]">--}}
-{{--                                <div class="shrink-0 bg-edpurple h-[80px] xl:h-[70px] aspect-square rounded-[6px] flex items-center justify-center">--}}
-{{--                                    <img src="assets/img/icon/target.svg" alt="icon">--}}
-{{--                                </div>--}}
-
-{{--                                <!-- txt -->--}}
-{{--                                <div>--}}
-{{--                                    <h6 class="font-semibold text-[18px] text-edblue mb-[5px]">Our Mission</h6>--}}
-{{--                                    <p class="text-[16px] text-edgray">Aliquam erat volutpat nullam imperdiet</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="flex items-center lg:flex-col lg:items-start md:flex-row md:items-center gap-[20px] xl:gap-[15px]">--}}
-{{--                                <div class="shrink-0 bg-edpurple h-[80px] xl:h-[70px] aspect-square rounded-[6px] flex items-center justify-center">--}}
-{{--                                    <img src="assets/img/icon/book-light.svg" alt="icon">--}}
-{{--                                </div>--}}
-
-{{--                                <!-- txt -->--}}
-{{--                                <div>--}}
-{{--                                    <h6 class="font-semibold text-[18px] text-edblue mb-[5px]">Our Vision</h6>--}}
-{{--                                    <p class="text-[16px] text-edgray">Ut vehiculadictumst maecenas ante.</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                        <div class="flex flex-wrap items-center gap-x-[24px] gap-y-[20px]">--}}
-{{--                            <div class="flex gap-x-[8px]">--}}
-{{--                                <div class="rounded-full overflow-hidden w-[58px] aspect-square shrink-0">--}}
-{{--                                    <img src="assets/img/user.png" alt="Principal" class="w-[58px] aspect-square">--}}
-{{--                                </div>--}}
-{{--                                <div>--}}
-{{--                                    <h5 class="font-semibold text-[18px] text-black mb-[4px]">Ronald Richards</h5>--}}
-{{--                                    <h6 class="text-edgray">Principal <span class="text-edpurple">Edutics</span></h6>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <a href="#" class="ed-btn">Message Principal</a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </section>--}}
-        <!-- ABOUT SECTION END -->
 
 
 
@@ -226,88 +172,41 @@
                 <!-- heading -->
                 <div class="flex flex-wrap xs:flex-col xs:text-center justify-between items-center gap-y-[15px] mb-[46px] md:mb-[30px]">
                     <div>
-                        <h6 class="ed-section-sub-title">Our Expert</h6>
-                        <h2 class="ed-section-title">Our Expert Teacher</h2>
+                        <h6 class="text-green text-[18px] font-semibold uppercase tracking-wide mb-2">Our Expert</h6>
+                        <h2 class="text-green text-[28px] font-semibold uppercase tracking-wide mb-2">Our Expert Teacher</h2>
                     </div>
 
-                    <a href="#" class="ed-btn !bg-transparent border border-edpurple !text-edpurple hover:!bg-edpurple hover:!text-white">view all teacher <span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                    <a href="#" class="ed-btn !bg-transparent border border-edgreen !text-edgreen hover:!bg-edred hover:!text-white" >view all teacher <span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span></a>
                 </div>
 
                 <div class="grid grid-cols-3 sm:grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px]">
                     <!-- single teacher -->
-                    <div class="ed-teacher group">
-                        <div class="ed-teacher__img rounded-[16px] overflow-hidden">
-                            <img src="{{asset('assets/img/teacher.jpg')}}" alt="Team Member Image" class="w-full aspect-[370/375] duration-[400ms] group-hover:scale-110">
-                        </div>
-
-                        <div class="ed-teacher__txt bg-white relative z-[1] mx-[25px] lg:mx-[20px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] xl:px-[20px] md:px-[15px] pb-[30px] lg:pb-[25px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
-                            <div class="ed-teacher-socials absolute right-[20px] -top-[43px]">
-                                <div class="ed-speaker__socials flex flex-col gap-[8px] absolute -z-[2] text-[14px] opacity-0 transition duration-[400ms] bottom-[calc(100%+8px)] translate-y-[100%] group-hover:translate-y-0 group-hover:opacity-100">
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-x-twitter"></i></a>
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-instagram"></i></a>
-                                </div>
-                                <div class="ed-teacher-socials__icon bg-edpurple w-[36px] aspect-square rounded-full bg-etBlue flex items-center justify-center">
-                                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.89361 9.41703C9.22284 9.41703 8.61849 9.70668 8.19906 10.1675L4.42637 7.83088C4.52995 7.56611 4.58305 7.28429 4.58294 6.99999C4.58307 6.71568 4.52997 6.43386 4.42637 6.16909L8.19906 3.83238C8.61851 4.29318 9.22284 4.58297 9.89361 4.58297C11.1572 4.58297 12.1851 3.55501 12.1851 2.29143C12.1851 1.02785 11.1572 0 9.89361 0C8.63005 0 7.60209 1.02796 7.60209 2.29154C7.60204 2.57583 7.65514 2.85763 7.75866 3.1224L3.98608 5.45903C3.56663 4.99824 2.96231 4.70845 2.29154 4.70845C1.02796 4.70845 0 5.73652 0 6.99999C0 8.26354 1.02796 9.29152 2.29154 9.29152C2.96228 9.29152 3.56666 9.00185 3.98608 8.54094L7.75869 10.8776C7.65515 11.1424 7.60204 11.4242 7.60209 11.7085C7.60209 12.972 8.63003 14 9.89361 14C11.1572 14 12.1851 12.972 12.1851 11.7086C12.1851 10.445 11.1572 9.41703 9.89361 9.41703ZM8.43766 2.29154C8.43766 1.48873 9.09082 0.835596 9.89361 0.835596C10.6964 0.835596 11.3495 1.48873 11.3495 2.29154C11.3495 3.09435 10.6964 3.74748 9.89361 3.74748C9.09079 3.74748 8.43766 3.09432 8.43766 2.29154ZM2.29154 8.45593C1.48862 8.45593 0.835487 7.80277 0.835487 6.99999C0.835487 6.1972 1.48862 5.54404 2.29154 5.54404C3.09435 5.54404 3.74737 6.1972 3.74737 6.99999C3.74737 7.80277 3.09432 8.45593 2.29154 8.45593ZM8.43766 11.7085C8.43766 10.9057 9.09082 10.2525 9.89361 10.2525C10.6964 10.2525 11.3495 10.9057 11.3495 11.7084C11.3495 12.5112 10.6964 13.1644 9.89361 13.1644C9.09079 13.1644 8.43766 12.5112 8.43766 11.7084V11.7085Z" fill="white"></path>
-                                    </svg>
-                                </div>
+                    @foreach ($teacher as $item)
+                        <div class="ed-teacher group">
+                            <div class="ed-teacher__img rounded-[16px] overflow-hidden">
+                                <img src="{{ asset('uploads/teacher/' . $item->image) }}" alt="{{ $item->name }}" class="w-full aspect-[370/375] duration-[400ms] group-hover:scale-110">
                             </div>
-                            <h5 class="font-semibold text-[20px] text-etBlack mb-[4px]"><a href="#" class="hover:text-etBlue">Cameron Williamson</a></h5>
-                            <span class="text-etGray text-[16px]">President of Sales</span>
-                        </div>
-                    </div>
 
-                    <!-- single teacher -->
-                    <div class="ed-teacher group">
-                        <div class="ed-teacher__img rounded-[16px] overflow-hidden">
-                            <img src="{{asset('assets/img/teacher1.jpg')}}" alt="Team Member Image" class="w-full aspect-[370/375] duration-[400ms] group-hover:scale-110">
-                        </div>
-
-                        <div class="ed-teacher__txt bg-white relative z-[1] mx-[25px] lg:mx-[20px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] xl:px-[20px] md:px-[15px] pb-[30px] lg:pb-[25px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
-                            <div class="ed-teacher-socials absolute right-[20px] -top-[43px]">
-                                <div class="ed-speaker__socials flex flex-col gap-[8px] absolute -z-[2] text-[14px] opacity-0 transition duration-[400ms] bottom-[calc(100%+8px)] translate-y-[100%] group-hover:translate-y-0 group-hover:opacity-100">
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-x-twitter"></i></a>
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-instagram"></i></a>
+                            <div class="ed-teacher__txt bg-white relative z-[1] mx-[25px] lg:mx-[20px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] xl:px-[20px] md:px-[15px] pb-[30px] lg:pb-[25px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
+                                <div class="ed-teacher-socials absolute right-[20px] -top-[43px]">
+                                    <div class="ed-speaker__socials flex flex-col gap-[8px] absolute -z-[2] text-[14px] opacity-0 transition duration-[400ms] bottom-[calc(100%+8px)] translate-y-[100%] group-hover:translate-y-0 group-hover:opacity-100">
+                                        <a href="{{ $item->facebook ?? '#' }}" class="bg-white text-edgreen w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="{{ $item->twitter ?? '#' }}" class="bg-white text-edgreen w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-x-twitter"></i></a>
+                                        <a href="{{ $item->linkedin ?? '#' }}" class="bg-white text-edgreen w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="{{ $item->instagram ?? '#' }}" class="bg-white text-edgreen w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-instagram"></i></a>
+                                    </div>
                                 </div>
-                                <div class="ed-teacher-socials__icon bg-edpurple w-[36px] aspect-square rounded-full bg-etBlue flex items-center justify-center">
-                                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.89361 9.41703C9.22284 9.41703 8.61849 9.70668 8.19906 10.1675L4.42637 7.83088C4.52995 7.56611 4.58305 7.28429 4.58294 6.99999C4.58307 6.71568 4.52997 6.43386 4.42637 6.16909L8.19906 3.83238C8.61851 4.29318 9.22284 4.58297 9.89361 4.58297C11.1572 4.58297 12.1851 3.55501 12.1851 2.29143C12.1851 1.02785 11.1572 0 9.89361 0C8.63005 0 7.60209 1.02796 7.60209 2.29154C7.60204 2.57583 7.65514 2.85763 7.75866 3.1224L3.98608 5.45903C3.56663 4.99824 2.96231 4.70845 2.29154 4.70845C1.02796 4.70845 0 5.73652 0 6.99999C0 8.26354 1.02796 9.29152 2.29154 9.29152C2.96228 9.29152 3.56666 9.00185 3.98608 8.54094L7.75869 10.8776C7.65515 11.1424 7.60204 11.4242 7.60209 11.7085C7.60209 12.972 8.63003 14 9.89361 14C11.1572 14 12.1851 12.972 12.1851 11.7086C12.1851 10.445 11.1572 9.41703 9.89361 9.41703ZM8.43766 2.29154C8.43766 1.48873 9.09082 0.835596 9.89361 0.835596C10.6964 0.835596 11.3495 1.48873 11.3495 2.29154C11.3495 3.09435 10.6964 3.74748 9.89361 3.74748C9.09079 3.74748 8.43766 3.09432 8.43766 2.29154ZM2.29154 8.45593C1.48862 8.45593 0.835487 7.80277 0.835487 6.99999C0.835487 6.1972 1.48862 5.54404 2.29154 5.54404C3.09435 5.54404 3.74737 6.1972 3.74737 6.99999C3.74737 7.80277 3.09432 8.45593 2.29154 8.45593ZM8.43766 11.7085C8.43766 10.9057 9.09082 10.2525 9.89361 10.2525C10.6964 10.2525 11.3495 10.9057 11.3495 11.7084C11.3495 12.5112 10.6964 13.1644 9.89361 13.1644C9.09079 13.1644 8.43766 12.5112 8.43766 11.7084V11.7085Z" fill="white"></path>
-                                    </svg>
-                                </div>
+                                <h5 class="font-semibold text-[20px] text-etBlack mb-[4px]">
+                                    <a href="#" class="hover:text-etBlue">{{ $item->name }}</a>
+                                </h5>
+                                <span class="text-etGray text-[16px]">{{ $item->designation }}</span>
                             </div>
-                            <h5 class="font-semibold text-[20px] text-etBlack mb-[4px]"><a href="#" class="hover:text-etBlue">Cameron Williamson</a></h5>
-                            <span class="text-etGray text-[16px]">President of Sales</span>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <!-- single teacher -->
-                    <div class="ed-teacher group">
-                        <div class="ed-teacher__img rounded-[16px] overflow-hidden">
-                            <img src="{{asset('assets/img/teacher2.jpg')}}" alt="Team Member Image" class="w-full aspect-[370/375] duration-[400ms] group-hover:scale-110">
-                        </div>
 
-                        <div class="ed-teacher__txt bg-white relative z-[1] mx-[25px] lg:mx-[20px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] xl:px-[20px] md:px-[15px] pb-[30px] lg:pb-[25px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
-                            <div class="ed-teacher-socials absolute right-[20px] -top-[43px]">
-                                <div class="ed-speaker__socials flex flex-col gap-[8px] absolute -z-[2] text-[14px] opacity-0 transition duration-[400ms] bottom-[calc(100%+8px)] translate-y-[100%] group-hover:translate-y-0 group-hover:opacity-100">
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-x-twitter"></i></a>
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-linkedin-in"></i></a>
-                                    <a href="#" class="bg-white text-edpurple w-[36px] h-[36px] flex items-center justify-center rounded-full hover:text-white hover:bg-edpurple"><i class="fa-brands fa-instagram"></i></a>
-                                </div>
-                                <div class="ed-teacher-socials__icon bg-edpurple w-[36px] aspect-square rounded-full bg-etBlue flex items-center justify-center">
-                                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.89361 9.41703C9.22284 9.41703 8.61849 9.70668 8.19906 10.1675L4.42637 7.83088C4.52995 7.56611 4.58305 7.28429 4.58294 6.99999C4.58307 6.71568 4.52997 6.43386 4.42637 6.16909L8.19906 3.83238C8.61851 4.29318 9.22284 4.58297 9.89361 4.58297C11.1572 4.58297 12.1851 3.55501 12.1851 2.29143C12.1851 1.02785 11.1572 0 9.89361 0C8.63005 0 7.60209 1.02796 7.60209 2.29154C7.60204 2.57583 7.65514 2.85763 7.75866 3.1224L3.98608 5.45903C3.56663 4.99824 2.96231 4.70845 2.29154 4.70845C1.02796 4.70845 0 5.73652 0 6.99999C0 8.26354 1.02796 9.29152 2.29154 9.29152C2.96228 9.29152 3.56666 9.00185 3.98608 8.54094L7.75869 10.8776C7.65515 11.1424 7.60204 11.4242 7.60209 11.7085C7.60209 12.972 8.63003 14 9.89361 14C11.1572 14 12.1851 12.972 12.1851 11.7086C12.1851 10.445 11.1572 9.41703 9.89361 9.41703ZM8.43766 2.29154C8.43766 1.48873 9.09082 0.835596 9.89361 0.835596C10.6964 0.835596 11.3495 1.48873 11.3495 2.29154C11.3495 3.09435 10.6964 3.74748 9.89361 3.74748C9.09079 3.74748 8.43766 3.09432 8.43766 2.29154ZM2.29154 8.45593C1.48862 8.45593 0.835487 7.80277 0.835487 6.99999C0.835487 6.1972 1.48862 5.54404 2.29154 5.54404C3.09435 5.54404 3.74737 6.1972 3.74737 6.99999C3.74737 7.80277 3.09432 8.45593 2.29154 8.45593ZM8.43766 11.7085C8.43766 10.9057 9.09082 10.2525 9.89361 10.2525C10.6964 10.2525 11.3495 10.9057 11.3495 11.7084C11.3495 12.5112 10.6964 13.1644 9.89361 13.1644C9.09079 13.1644 8.43766 12.5112 8.43766 11.7084V11.7085Z" fill="white"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <h5 class="font-semibold text-[20px] text-etBlack mb-[4px]"><a href="#" class="hover:text-etBlue">Cameron Williamson</a></h5>
-                            <span class="text-etGray text-[16px]">President of Sales</span>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
 

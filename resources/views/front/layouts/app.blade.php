@@ -11,10 +11,29 @@
     <!-- plugins & libraries css -->
     <link rel="stylesheet" href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendor/font-awesome/all.min.css')}}">
+    <!-- tailwind css via CDN -->
+{{--    <script src="https://cdn.tailwindcss.com"></script>--}}
 
+    <!-- Tailwind CSS v3.4.3 CDN -->
+{{--    <script src="https://cdn.tailwindcss.com?version=3.4.3"></script>--}}
     <!-- tailwind css -->
     <link rel="stylesheet" href="{{asset('src/output.css')}}">
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        edgreen: '#28A745',
+                        edyellow: '#FFD600',
+                        edpurple: '#6F42C1',
+                        edblue: '#007BFF',
+                        edgray2: '#6C757D',
+                    }
+                }
+            }
+        }
+    </script
     <!-- custom css -->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     @stack("styles")
