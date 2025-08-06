@@ -156,46 +156,46 @@
                     </div>
 
                     <!-- Existing Gallery -->
-{{--                    <div class="form-group row">--}}
-{{--                        <label class="col-sm-3 col-form-label text-right font-weight-bold">Exist Gallery</label>--}}
-{{--                        <div class="col-sm-6">--}}
-{{--                            <table class="table table-sm table-bordered">--}}
-{{--                                <thead>--}}
-{{--                                <tr>--}}
-{{--                                    <th>SL</th>--}}
-{{--                                    <th>Image</th>--}}
-{{--                                    <th>Action</th>--}}
-{{--                                </tr>--}}
-{{--                                </thead>--}}
-{{--                                <tbody>--}}
-{{--                                @php--}}
-{{--                                    $gallery = is_array($event->gallery) ? $event->gallery : json_decode($event->gallery, true);--}}
-{{--                                @endphp--}}
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label text-right font-weight-bold">Exist Gallery</label>
+                        <div class="col-sm-6">
+                            <table class="table table-sm table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>SL</th>
+                                    <th>Image</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @php
+                                    $gallery = is_array($event->gallery) ? $event->gallery : json_decode($event->gallery, true);
+                                @endphp
 
-{{--                                @if (!empty($gallery) && is_array($gallery))--}}
-{{--                                    @foreach($gallery as $i => $image)--}}
-{{--                                        <tr id="gallery_item_{{ $i + 1 }}">--}}
-{{--                                            <td>--}}
-{{--                                                <input type="hidden" name="hidden_gallery[]" value="{{ $image }}">--}}
-{{--                                                {{ $i + 1 }}--}}
-{{--                                            </td>--}}
-{{--                                            <td><img src="{{ asset("uploads/gallery/$image") }}" width="100" alt="{{ $image }}"></td>--}}
-{{--                                            <td style="width: 50px">--}}
-{{--                                                <button type="button" onclick="document.getElementById('gallery_item_{{ $i + 1 }}').remove()" class="btn btn-sm btn-danger">--}}
-{{--                                                    <i class="fa fa-times"></i>--}}
-{{--                                                </button>--}}
-{{--                                            </td>--}}
-{{--                                        </tr>--}}
-{{--                                    @endforeach--}}
-{{--                                @else--}}
-{{--                                    <tr>--}}
-{{--                                        <td colspan="3" class="text-center">Image not exist</td>--}}
-{{--                                    </tr>--}}
-{{--                                @endif--}}
-{{--                                </tbody>--}}
-{{--                            </table>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                                @if (!empty($gallery) && is_array($gallery))
+                                    @foreach($gallery as $i => $image)
+                                        <tr id="gallery_item_{{ $i + 1 }}">
+                                            <td>
+                                                <input type="hidden" name="hidden_gallery[]" value="{{ $image }}">
+                                                {{ $i + 1 }}
+                                            </td>
+                                            <td><img src="{{ asset("uploads/gallery/$image") }}" width="100" alt="{{ $image }}"></td>
+                                            <td style="width: 50px">
+                                                <button type="button" onclick="document.getElementById('gallery_item_{{ $i + 1 }}').remove()" class="btn btn-sm btn-danger">
+                                                    <i class="fa fa-times"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                @else
+                                    <tr>
+                                        <td colspan="3" class="text-center">Image not exist</td>
+                                    </tr>
+                                @endif
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
                     <!-- Upload New Gallery -->
                     <div class="form-group row">

@@ -457,30 +457,66 @@
         <!-- GALLERY SECTION START -->
         <div class="overflow-hidden">
             <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-                <h5 class="font-semibold text-[24px] text-edblue text-center mb-[40px] relative z-[1] before:absolute before:-z-[1] before:w-[100%] before:h-[1px] before:left-0 before:top-[50%] before:bg-[#D9D9D9] before:-translate-y-[50%]"><span class="bg-white px-[20px]">Our School Gallery</span></h5>
+                <!-- Section Title -->
+                <h5 class="font-semibold text-[24px] text-edblue text-center mb-[40px] relative z-[1]
+            before:absolute before:-z-[1] before:w-full before:h-[1px] before:left-0
+            before:top-1/2 before:bg-[#D9D9D9] before:-translate-y-1/2">
+                    <span class="bg-white px-[20px]">Our School Gallery</span>
+                </h5>
 
-                <!-- gallery slider -->
+                <!-- Gallery Slider -->
                 <div class="ed-gallery-slider swiper overflow-visible">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide max-w-max">
-                            <a href="#" data-fslightbox="gallery" class="block rounded-[40px] overflow-hidden"
-                            ><img src="{{asset('assets/img/School2.jpg')}}" alt="Gallery image"></a>
-                        </div>
-                        <div class="swiper-slide max-w-max">
-                            <div class="relative rounded-[40px] overflow-hidden">
-                                <img src="{{asset('assets/img/School2.jpg')}}" alt="Gallery image">
-                                <a href="#" data-fslightbox="gallery" class="flex items-center justify-center w-[60px] aspect-square bg-white rounded-full text-[#3746D2] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] before:border before:absolute before:top-[50%] before:-translate-y-[50%] before:left-[50%] before:-translate-x-[50%] before:w-[calc(100%+15px)] before:h-[calc(100%+15px)] before:rounded-full before:transition before:duration-[400ms] hover:bg-edpurple hover:text-white hover:before:border-edpurple"><i class="fa-solid fa-play"></i></a>
+                        @forelse($gallery as $item)
+                            @php
+                                $videoId = null;
+                                if ($item->youtube) {
+                                    $videoId = Str::contains($item->youtube, 'youtu.be/')
+                                        ? Str::before(Str::after($item->youtube, 'youtu.be/'), '?')
+                                        : (Str::contains($item->youtube, 'watch?v=')
+                                            ? Str::before(Str::after($item->youtube, 'watch?v='), '&')
+                                            : null);
+                                }
+                            @endphp
+
+                            <div class="swiper-slide max-w-max">
+                                <div class="block rounded-[40px] overflow-hidden shadow-md relative group">
+                                    @if ($item->image)
+                                        <!-- Image Item -->
+                                        <a href="{{ asset('uploads/gallery/' . $item->image) }}"
+                                           data-fslightbox="gallery"
+                                           class="block relative">
+                                            <img src="{{ asset('uploads/gallery/' . $item->image) }}"
+                                                 alt="Gallery Image"
+                                                 class="w-full h-[220px] object-cover transition-transform duration-300 group-hover:scale-105">
+                                        </a>
+                                    @elseif ($videoId)
+                                        <!-- Video Item -->
+                                        <iframe width="300" height="220"
+                                                src="https://www.youtube.com/embed/{{ $videoId }}"
+                                                frameborder="0"
+                                                allowfullscreen
+                                                class="rounded-[20px] w-full h-[220px] object-cover"></iframe>
+                                    @else
+                                        <!-- Empty Placeholder -->
+                                        <div class="w-[300px] h-[220px] flex items-center justify-center bg-gray-100 text-gray-500 text-sm">
+                                            No Image or Video
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide max-w-max">
-                            <a href="#" data-fslightbox="gallery" class="block rounded-[40px] overflow-hidden">
-                                <img src="{{asset('assets/img/School2.jpg')}}" alt="Gallery image"></a>
-                        </div>
+                        @empty
+                            <div class="swiper-slide">
+                                <p class="text-center text-gray-500">No gallery items found.</p>
+                            </div>
+                        @endforelse
                     </div>
                 </div>
             </div>
         </div>
         <!-- GALLERY SECTION END -->
+
+
 
 
         <!-- TESTIMONIAL SECTION START -->
@@ -584,40 +620,45 @@
                             </div>
                         </div>
                         <div class="grow space-y-[30px]">
-                            <!-- single upcoming event -->
-                            <div class="bg-white flex lg:flex-col items-start gap-x-[20px] gap-y-[10px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] rounded-[20px] p-[30px] xxs:p-[20px]">
-                                <!-- date -->
-                                <div class="bg-edyellow rounded-[10px] font-medium text-[16px] text-black inline-block uppercase overflow-hidden text-center shrink-0">
-                                    <span class="bg-edpurple text-white text-[20px] block py-[7px] px-[30px] rounded-[10px]">2024</span>
-                                    <span class="px-[15px] p-[10px] block leading-[1.44] font-semibold">20 <span class="block">Oct</span></span>
-                                </div>
+                            @forelse($events as $event)
+                                @php
+                                    $date = \Carbon\Carbon::parse($event->event_date);
+                                @endphp
 
-                                <!-- text -->
-                                <div>
-                                    <h5 class="font-semibold text-[20px] mb-[7px]"><a href="#" class="hover:text-edpurple">SAT Implementation Workshops November 2026</a></h5>
-                                    <h6 class="text-edpurple font-medium">11:00 - 13:30</h6>
-                                    <p class="border-t border-[#002147]/20 pt-[17px] mt-[10px]">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                </div>
-                            </div>
+                                    <!-- single upcoming event -->
+                                <div class="bg-white flex lg:flex-col items-start gap-x-[20px] gap-y-[10px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] rounded-[20px] p-[30px] xxs:p-[20px]">
+                                    <!-- date -->
+                                    <div class="bg-edyellow rounded-[10px] font-medium text-[16px] text-black inline-block uppercase overflow-hidden text-center shrink-0">
+                                        <span class="bg-edpurple text-white text-[20px] block py-[7px] px-[30px] rounded-[10px]">
+                                            {{ $date->format('Y') }}
+                                        </span>
+                                        <span class="px-[15px] p-[10px] block leading-[1.44] font-semibold">
+                                            {{ $date->format('d') }} <span class="block">{{ $date->format('M') }}</span>
+                                        </span>
+                                    </div>
 
-                            <!-- single upcoming event -->
-                            <div class="bg-white flex lg:flex-col items-start gap-x-[20px] gap-y-[10px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] rounded-[20px] p-[30px] xxs:p-[20px]">
-                                <!-- date -->
-                                <div class="bg-edyellow rounded-[10px] font-medium text-[16px] text-black inline-block uppercase overflow-hidden text-center shrink-0">
-                                    <span class="bg-edpurple text-white text-[20px] block py-[7px] px-[30px] rounded-[10px]">2024</span>
-                                    <span class="px-[15px] p-[10px] block leading-[1.44] font-semibold">20 <span class="block">Oct</span></span>
+                                    <!-- text -->
+                                    <div>
+                                        <h5 class="font-semibold text-[20px] mb-[7px]">
+                                            <a href=" {{ route('eventDetails', ['event_name' => $event->event_name]) }} " class="hover:text-edpurple">{{ $event->event_name }}</a>
+                                        </h5>
+                                        <h6 class="text-edpurple font-medium">
+                                            {{ \Carbon\Carbon::parse($event->start_time)->format('H:i') }} -
+                                            {{ \Carbon\Carbon::parse($event->end_time)->format('H:i') }}
+                                        </h6>
+                                        <p class="border-t border-[#002147]/20 pt-[17px] mt-[10px]">
+                                            {{ Str::limit($event->short_description, 100) }}
+                                        </p>
+                                    </div>
                                 </div>
-
-                                <!-- text -->
-                                <div>
-                                    <h5 class="font-semibold text-[20px] mb-[7px]"><a href="#" class="hover:text-edpurple">SAT Implementation Workshops November 2026</a></h5>
-                                    <h6 class="text-edpurple font-medium">11:00 - 13:30</h6>
-                                    <p class="border-t border-[#002147]/20 pt-[17px] mt-[10px]">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                </div>
-                            </div>
+                            @empty
+                                <p class="text-center text-gray-500">No upcoming events available.</p>
+                            @endforelse
                         </div>
+
+
+
                     </div>
-                </div>
             </div>
         </section>
         <!-- TESTIMONIAL SECTION END -->

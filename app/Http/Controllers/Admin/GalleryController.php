@@ -22,7 +22,7 @@ class GalleryController extends Controller
 
     public function index()
     {
-        $gallery = Gallery::all();
+        $gallery = Gallery::latest()->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view('admin.gallery.index',compact('gallery','settings'));
     }

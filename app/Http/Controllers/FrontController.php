@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Event;
+use App\Models\Gallery;
 use App\Models\Notice;
 use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Teacher;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -28,8 +31,15 @@ class FrontController extends Controller
                     ->latest()
                     ->get();
         $notices  =   Notice::latest()->take(3)->get();
+        $gallery = Gallery::latest()->get();
+        $events = Event::query()
+                ->where("status", 1)
+                ->where("event_date", ">", now()->toDateString())
+                ->orderByDesc("event_date")
+                ->get();
 
-        return view('front.index',compact('sliders','settings','about','teacher','notices'));
+        return view('front.index',compact('sliders','settings',
+            'about','teacher','notices','gallery','events'));
     }
 
     public function aboutUs($title = null)
@@ -75,6 +85,45 @@ class FrontController extends Controller
         $notice = Notice::where('title', $title)->firstOrFail();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view('front.noticeDetails', compact('notice','settings'));
+    }
+
+
+    public  function gallerys($title = null)
+    {
+        $gallery = Gallery::all();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        return view('front.gallery', compact('gallery','settings'));
+    }
+
+    public function event()
+    {
+        $today = Carbon::today()->toDateString();
+
+        // First: Past events (latest first)
+        $pastEvents = Event::where('event_date', '<', $today)
+            ->orderBy('event_date', 'desc')
+            ->get();
+
+        // Then: Upcoming events (soonest first)
+        $upcomingEvents = Event::where('event_date', '>=', $today)
+            ->orderBy('event_date', 'asc')
+            ->get();
+
+        // Merge past events first, then upcoming
+        $events = $pastEvents->merge($upcomingEvents);
+
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+
+        return view('front.event', compact('events', 'settings'));
+    }
+
+
+    public  function eventDetails ($event_name = null)
+    {
+        $event = Event::where('event_name', $event_name)->firstOrFail();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        return view('front.eventDetails', compact('event','settings'));
+
     }
 
 }

@@ -77,8 +77,8 @@
                             <ul class="ed-header-submenu">
                                 <li><a href="{{route('teachers')}}">Teachers</a></li>
                                 <li><a href="{{route('notices')}}">Notices</a></li>
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">Gallery</a></li>
+                                <li><a href="{{route('event')}}">Events</a></li>
+                                <li><a href="{{route('gallerys')}}">Gallery</a></li>
                                 <li><a href="#">FAQ</a></li>
 {{--                                <li><a href="coming-soon.html">Coming Soon Page</a></li>--}}
 {{--                                <li><a href="404.html">Error 404</a></li>--}}

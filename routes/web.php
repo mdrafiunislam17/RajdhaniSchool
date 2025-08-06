@@ -39,7 +39,9 @@ Route::get('teachers',[FrontController::class,'teachers'])->name('teachers');
 Route::get('teacher_details/{name?}',[FrontController::class, 'teacherdetails'])->name('teacherdetails');
 Route::get('notices',[FrontController::class,'notices'])->name('notices');
 Route::get('notice_details/{title?}',[FrontController::class,'noticeDetails'])->name('titleDetails');
-
+Route::get('/gallerys', [FrontController::class, 'gallerys'])->name('gallerys');
+Route::get('event',[FrontController::class,'event'])->name('event');
+Route::get('event_details/{event_name?}',[FrontController::class,'eventDetails'])->name('eventDetails');
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
