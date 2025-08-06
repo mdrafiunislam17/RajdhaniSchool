@@ -197,7 +197,13 @@
                                     </div>
                                 </div>
                                 <h5 class="font-semibold text-[20px] text-etBlack mb-[4px]">
-                                    <a href="#" class="hover:text-etBlue">{{ $item->name }}</a>
+                                    {{-- <a href="#" class="hover:text-etBlue">{{ $item->name }}</a>
+                                     --}}
+
+                                     <a href="{{ route('teacherdetails', ['name' => $item->name]) }}" class="hover:text-etBlue">
+                                        {{ $item->name }}
+                                    </a>
+
                                 </h5>
                                 <span class="text-etGray text-[16px]">{{ $item->designation }}</span>
                             </div>
@@ -219,7 +225,7 @@
 
 
         <!-- ADMISSION PROCESS SECTION START -->
-        <section class="py-[120px] xl:py-[80px] md:py-[60px] bg-[#FAF9F6] relative z-[1]">
+        {{-- <section class="py-[120px] xl:py-[80px] md:py-[60px] bg-[#FAF9F6] relative z-[1]">
             <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
                 <div class="flex flex-col gap-x-[85px] items-start relative">
                     <!-- heading -->
@@ -271,7 +277,7 @@
                 <img src="assets/img/admission-vector-1.svg" alt="vector" class="absolute -z-[1] top-[156px] left-0">
                 <img src="assets/img/admission-vector-2.svg" alt="vector" class="absolute -z-[1] bottom-[130px] right-[80px]">
             </div>
-        </section>
+        </section> --}}
         <!-- ADMISSION PROCESS SECTION END -->
 
 
@@ -290,8 +296,8 @@
                         <!-- main content -->
                         <div class="p-[40px] pr-0 lg:pr-[40px] text-center">
                             <img src="{{asset('assets/img/Admission.png')}}" alt="form image" class="mx-auto drop-shadow-[0_4px_30px_rgba(0,0,0,0.1)] mb-[17px]">
-                            <h5 class="text-[20px] text-edblue mb-[28px]">Free Download Admission Form</h5>
-                            <a href="assets/pdf/notice.pdf" download class="ed-btn">Download Free</a>
+                            <h5 class="text-[20px] text-edblue mb-[28px]">Free  Admission Online Form</h5>
+                            <a href="assets/pdf/notice.pdf" download class="ed-btn">apply now</a>
                         </div>
                     </div>
 
@@ -306,43 +312,28 @@
                         <!-- main content -->
                         <div class="p-[40px] xl:px-[25px] lg:pl-[70px] sm:pl-[50px] xxs:p-[15px] space-y-[22px]">
                             <!-- single notice -->
-                            <div class="flex gap-x-[20px] items-center relative before:absolute before:h-[1px] before:w-[40px] xl:before:w-[30px] before:bg-edpurple before:right-[100%] before:top-[50%] before:-translate-y-[50%] xxs:before:content-none after:absolute after:w-[1px] after:h-[114%] after:bg-edpurple after:bottom-[50%] after:right-[calc(100%+40px)] xl:after:right-[calc(100%+30px)] xxs:after:content-none first:after:content-none">
+
+                            @foreach ($notices  as $item)
+
+                                <div class="flex gap-x-[20px] items-center relative before:absolute before:h-[1px] before:w-[40px] xl:before:w-[30px] before:bg-edpurple before:right-[100%] before:top-[50%] before:-translate-y-[50%] xxs:before:content-none after:absolute after:w-[1px] after:h-[114%] after:bg-edpurple after:bottom-[50%] after:right-[calc(100%+40px)] xl:after:right-[calc(100%+30px)] xxs:after:content-none first:after:content-none">
                                 <div class="xxs:hidden icon shrink-0 p-[14px] bg-white border border-[#d9d9d9] rounded-[10px] w-[110px] xl:w-[90px] aspect-square flex items-center justify-center">
                                     <img src="assets/img/notice-icon.png" alt="icon">
                                 </div>
 
                                 <div class="pb-[26px] md:pb-[16px] border-b border-[#D9D9D9]">
-                                    <h5 class="font-semibold text-[20px] text-edblue mb-[6px]"><a href="#" class="hover:text-edpurple">Summer Course Starts From 1st June</a></h5>
-                                    <h6 class="font-medium text-edpurple mb-[10px]">September 14, 2024</h6>
-                                    <p class="text-edgray">There are many variations of passages of Lorem Ipsum available, but the majority</p>
+                                    <h5 class="font-semibold text-[20px] text-edblue mb-[6px]">
+                                        <a href="{{ route('titleDetails', ['title' => $item->title]) }}" class="hover:text-edpurple">{{$item->title}}</a>
+                                    </h5>
+                                    <h6 class="font-medium text-edpurple mb-[10px]">
+                                         {{ \Carbon\Carbon::parse($item->created_at)->format('F d, Y') }}
+                                    </h6>
+                                    {{ \Illuminate\Support\Str::words(strip_tags($item->description), 13, '...') }}
                                 </div>
                             </div>
 
-                            <!-- single notice -->
-                            <div class="flex gap-x-[20px] items-center relative before:absolute before:h-[1px] before:w-[40px] xl:before:w-[30px] before:bg-edpurple before:right-[100%] before:top-[50%] before:-translate-y-[50%] xxs:before:content-none after:absolute after:w-[1px] after:h-[114%] after:bg-edpurple after:bottom-[50%] after:right-[calc(100%+40px)] xl:after:right-[calc(100%+30px)] xxs:after:content-none first:after:content-none">
-                                <div class="xxs:hidden icon shrink-0 p-[14px] bg-white border border-[#d9d9d9] rounded-[10px] w-[110px] xl:w-[90px] aspect-square flex items-center justify-center">
-                                    <img src="assets/img/notice-icon.png" alt="icon">
-                                </div>
+                            @endforeach
 
-                                <div class="pb-[26px] md:pb-[16px] border-b border-[#D9D9D9]">
-                                    <h5 class="font-semibold text-[20px] text-edblue mb-[6px]"><a href="#" class="hover:text-edpurple">Summer Course Starts From 1st June</a></h5>
-                                    <h6 class="font-medium text-edpurple mb-[10px]">September 14, 2024</h6>
-                                    <p class="text-edgray">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                </div>
-                            </div>
 
-                            <!-- single notice -->
-                            <div class="flex gap-x-[20px] items-center relative before:absolute before:h-[1px] before:w-[40px] xl:before:w-[30px] before:bg-edpurple before:right-[100%] before:top-[50%] before:-translate-y-[50%] xxs:before:content-none after:absolute after:w-[1px] after:h-[114%] after:bg-edpurple after:bottom-[50%] after:right-[calc(100%+40px)] xl:after:right-[calc(100%+30px)] xxs:after:content-none first:after:content-none">
-                                <div class="xxs:hidden icon shrink-0 p-[14px] bg-white border border-[#d9d9d9] rounded-[10px] w-[110px] xl:w-[90px] aspect-square flex items-center justify-center">
-                                    <img src="assets/img/notice-icon.png" alt="icon">
-                                </div>
-
-                                <div class="pb-[26px] md:pb-[16px] border-b border-[#D9D9D9]">
-                                    <h5 class="font-semibold text-[20px] text-edblue mb-[6px]"><a href="#" class="hover:text-edpurple">Summer Course Starts From 1st June</a></h5>
-                                    <h6 class="font-medium text-edpurple mb-[10px]">September 14, 2024</h6>
-                                    <p class="text-edgray">There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

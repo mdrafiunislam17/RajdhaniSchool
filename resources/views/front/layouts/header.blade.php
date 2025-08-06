@@ -75,7 +75,8 @@
                             <a role="button">Pages</a>
 
                             <ul class="ed-header-submenu">
-                                <li><a href="#">Teachers</a></li>
+                                <li><a href="{{route('teachers')}}">Teachers</a></li>
+                                <li><a href="{{route('notices')}}">Notices</a></li>
                                 <li><a href="#">Events</a></li>
                                 <li><a href="#">Gallery</a></li>
                                 <li><a href="#">FAQ</a></li>

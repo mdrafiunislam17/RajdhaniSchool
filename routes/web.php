@@ -35,6 +35,10 @@ use Illuminate\Support\Facades\Auth;
 // Route::get('/',[FrontController::class, 'index'])->name('front.index');
 Route::get('/',[FrontController::class, 'index'])->name('front.index');
 Route::get('/about/{title?}', [FrontController::class, 'aboutUs'])->name('aboutUs');
+Route::get('teachers',[FrontController::class,'teachers'])->name('teachers');
+Route::get('teacher_details/{name?}',[FrontController::class, 'teacherdetails'])->name('teacherdetails');
+Route::get('notices',[FrontController::class,'notices'])->name('notices');
+Route::get('notice_details/{title?}',[FrontController::class,'noticeDetails'])->name('titleDetails');
 
 Auth::routes();
 
