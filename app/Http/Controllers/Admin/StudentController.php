@@ -20,7 +20,7 @@ class StudentController extends Controller
 
     public function index()
     {
-        $student = Student::all();
+        $student = Student::latest()->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view('admin.student.index', compact('student', 'settings'));
     }

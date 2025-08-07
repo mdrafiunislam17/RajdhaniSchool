@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\NoticeController;
 use App\Http\Controllers\Admin\ResultController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\StudentController;
@@ -42,6 +43,8 @@ Route::get('notice_details/{title?}',[FrontController::class,'noticeDetails'])->
 Route::get('/gallerys', [FrontController::class, 'gallerys'])->name('gallerys');
 Route::get('event',[FrontController::class,'event'])->name('event');
 Route::get('event_details/{event_name?}',[FrontController::class,'eventDetails'])->name('eventDetails');
+Route::get('blog',[FrontController::class,'blog'])->name('blog');
+Route::get('blog_details/{title?}',[FrontController::class,'blogDetails'])->name('blogDetails');
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -56,6 +59,7 @@ Route::resource('notice',NoticeController::class);
 Route::resource('result',ResultController::class);
 Route::resource("blogs", BlogController::class);
 Route::resource("events", EventController::class);
+Route::resource('review',ReviewController::class);
 Route::get("settings", [SettingController::class, "index"])->name("setting.index");
 Route::put("settings", [SettingController::class, "update"])->name("setting.update");
 

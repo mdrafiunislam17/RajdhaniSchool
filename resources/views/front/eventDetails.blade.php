@@ -88,10 +88,10 @@
 
                                     <div class="grid grid-cols-2 gap-[20px] mt-[20px] mb-[30px]">
                                         @foreach(json_decode($event->gallery) as $image)
-                                            <a href="{{ asset('uploads/events/gallery/' . $image) }}"
+                                            <a href="{{ asset('uploads/gallery/' . $image) }}"
                                                data-fslightbox="event-gallery"
                                                class="block overflow-hidden rounded-[8px] hover:shadow-lg transition-shadow">
-                                                <img src="{{ asset('uploads/events/gallery/' . $image) }}"
+                                                <img src="{{ asset('uploads/gallery/' . $image) }}"
                                                      alt="Event gallery image"
                                                      class="w-full h-[200px] object-cover hover:scale-105 transition-transform"
                                                      loading="lazy">
@@ -100,23 +100,7 @@
                                     </div>
                                 @endif
 
-                                <!-- Call to Action -->
-                                <div class="border-t border-[#d9d9d9] pt-[24px] mt-[30px] flex items-center xxs:flex-col gap-[20px]">
-                                    <a href="#" class="inline-flex items-center h-[56px] rounded-[8px] bg-edpurple px-[24px] text-[17px] font-semibold text-white gap-[10px] hover:bg-edblue transition-colors">
-                                        Register Yourself <i class="fa-solid fa-arrow-right-long"></i>
-                                    </a>
-                                    <div class="flex gap-[12px] items-center">
-                                        <span class="icon bg-edpurple w-[50px] text-[18px] aspect-square rounded-full outline-[2px] outline outline-white -outline-offset-[3px] flex items-center justify-center text-white">
-                                            <i class="fa-solid fa-phone-volume"></i>
-                                        </span>
-                                        <span class="txt font-semibold text-etBlack">
-                                            <span class="block text-[14px] mb-[2px]">Call Us Now</span>
-                                            <a href="tel:{{ $event->phone ?? '+208-555-0112' }}" class="text-[18px] hover:text-etBlue">
-                                                {{ $event->phone ?? '+208-555-0112' }}
-                                            </a>
-                                        </span>
-                                    </div>
-                                </div>
+
                             </div>
                         @else
                             <div class="text-center py-[50px]">
@@ -193,20 +177,38 @@
                                     </li>
                                 </ul>
 
-                                <a href="#" class="ed-btn gap-[10px] !h-[56px] !rounded-[8px] w-full bg-edpurple hover:bg-edblue text-white transition-colors">
-                                    Get Ticket Now <i class="fa-solid fa-arrow-right-long"></i>
-                                </a>
+
 
                                 <!-- social links -->
-                                <div class="flex gap-[15px] items-center justify-center mt-[22px]">
+                             <div class="flex gap-[15px] items-center justify-center mt-[22px]">
                                     <h6 class="font-semibold text-[16px] text-black">Share:</h6>
                                     <div class="flex gap-[15px] text-[16px]">
-                                        <a href="#" class="text-[#757277] hover:text-edpurple transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#" class="text-[#757277] hover:text-edpurple transition-colors"><i class="fa-brands fa-twitter"></i></a>
-                                        <a href="#" class="text-[#757277] hover:text-edpurple transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-                                        <a href="#" class="text-[#757277] hover:text-edpurple transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                                        @if (!empty($settings['SETTING_SOCIAL_FACEBOOK']))
+                                            <a href="{{ $settings['SETTING_SOCIAL_FACEBOOK'] }}" target="_blank" class="text-[#757277] hover:text-edpurple transition-colors">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        @endif
+
+                                        @if (!empty($settings['SETTING_SOCIAL_TWITTER']))
+                                            <a href="{{ $settings['SETTING_SOCIAL_TWITTER'] }}" target="_blank" class="text-[#757277] hover:text-edpurple transition-colors">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        @endif
+
+                                        @if (!empty($settings['SETTING_SOCIAL_LINKEDIN']))
+                                            <a href="{{ $settings['SETTING_SOCIAL_LINKEDIN'] }}" target="_blank" class="text-[#757277] hover:text-edpurple transition-colors">
+                                                <i class="fa-brands fa-linkedin-in"></i>
+                                            </a>
+                                        @endif
+
+                                        @if (!empty($settings['SETTING_SOCIAL_INSTAGRAM']))
+                                            <a href="{{ $settings['SETTING_SOCIAL_INSTAGRAM'] }}" target="_blank" class="text-[#757277] hover:text-edpurple transition-colors">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        @endif
                                     </div>
                                 </div>
+
                             </div>
 
                             <!-- location map -->

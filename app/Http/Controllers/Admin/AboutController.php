@@ -23,7 +23,7 @@ class AboutController extends Controller
 
     public function index()
     {
-        $abouts = About::all();
+        $abouts = About::latest()->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view('admin.abouts.index',compact('abouts','settings'));
     }

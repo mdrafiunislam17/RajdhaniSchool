@@ -29,7 +29,7 @@ class BlogController extends Controller
      */
     public function index(): View
     {
-        $blogs = Blog::all();
+        $blogs = Blog::latest()->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view("admin.blogs.index", compact("blogs","settings"));
     }

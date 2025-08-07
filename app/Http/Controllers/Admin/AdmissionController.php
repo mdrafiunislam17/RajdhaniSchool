@@ -29,7 +29,7 @@ class AdmissionController extends Controller
 
     public function index()
     {
-        $admissions = Admission::all();
+        $admissions = Admission::latest()->get();
         $class = SchoolClass::all();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view('admin.admission.index', compact('admissions', 'settings','class'));

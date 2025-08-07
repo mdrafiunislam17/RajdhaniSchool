@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Blog;
 use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\Notice;
@@ -37,9 +38,9 @@ class FrontController extends Controller
                 ->where("event_date", ">", now()->toDateString())
                 ->orderByDesc("event_date")
                 ->get();
-
+        $blog  =   Blog::latest()->take(3)->get();
         return view('front.index',compact('sliders','settings',
-            'about','teacher','notices','gallery','events'));
+            'about','teacher','notices','gallery','events','blog'));
     }
 
     public function aboutUs($title = null)
@@ -123,6 +124,21 @@ class FrontController extends Controller
         $event = Event::where('event_name', $event_name)->firstOrFail();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view('front.eventDetails', compact('event','settings'));
+
+    }
+
+
+    public function blog(){
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        $blogs  =   Blog::all();
+        return view('front.blog', compact('blogs','settings'));
+    }
+
+        public  function blogDetails ($title = null)
+    {
+        $blog = Blog::where('title', $title)->firstOrFail();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        return view('front.blogDetails', compact('blog','settings'));
 
     }
 

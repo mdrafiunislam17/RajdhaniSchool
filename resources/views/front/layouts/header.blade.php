@@ -85,7 +85,7 @@
                             </ul>
                         </li>
                         <li class="has-sub-menu relative">
-                            <a role="button">Blog</a>
+                            <a href="{{route('blog')}}" role="button">Blog</a>
 
 {{--                            <ul class="ed-header-submenu">--}}
 {{--                                <li><a href="news-grid.html">News Grid</a></li>--}}

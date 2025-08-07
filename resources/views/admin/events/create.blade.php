@@ -1,3 +1,6 @@
+
+
+
 @extends("admin.layouts.master")
 @section("title", "Create Event")
 @section("content")
@@ -74,7 +77,7 @@
                     <div class="form-group row">
                         <label for="start_time" class="col-sm-3 col-form-label text-right font-weight-bold">Start Time *</label>
                         <div class="col-sm-6">
-                            <input type="time" class="form-control" id="start_time" value= "{{ old("start_time", now()->format('Y-m-d\TH:i')) }}"
+                            <input type="time" class="form-control" id="start_time" value="{{ old("start_time", now()->format('Y-m-d\TH:i')) }}"
                                    name="start_time">
                         </div>
                     </div>
@@ -82,7 +85,7 @@
                     <div class="form-group row">
                         <label for="end_time" class="col-sm-3 col-form-label text-right font-weight-bold">End Time *</label>
                         <div class="col-sm-6">
-                            <input type="time" class="form-control" id="end_time" value=" {{ old("end_time", now()->format('Y-m-d\TH:i')) }}"
+                            <input type="time" class="form-control" id="end_time" value="{{ old("end_time", now()->format('Y-m-d\TH:i')) }}"
                                    name="end_time">
                         </div>
                     </div>
@@ -149,13 +152,13 @@
 
                     <hr>
 
-{{--                    <div class="form-group row">--}}
-{{--                        <label for="gallery" class="col-sm-3 col-form-label text-right font-weight-bold">Gallery</label>--}}
-{{--                        <div class="col-sm-6">--}}
-{{--                            <input type="file" name="gallery[]" id="gallery" class="form-control" multiple accept="image/*">--}}
-{{--                            <small class="form-text text-muted">Multiple images support</small>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <div class="form-group row">
+                        <label for="gallery" class="col-sm-3 col-form-label text-right font-weight-bold">Gallery</label>
+                        <div class="col-sm-6">
+                            <input type="file" name="gallery[]" id="gallery" class="form-control" multiple accept="image/*">
+                            <small class="form-text text-muted">Multiple images support</small>
+                        </div>
+                    </div>
 
                     <div class="form-group row">
                         <div class="offset-3 col-sm-6">

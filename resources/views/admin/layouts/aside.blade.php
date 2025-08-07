@@ -164,5 +164,16 @@
         </a>
     </li>
 
+ <li class="nav-item {{
+    request()->routeIs("review.index") ||
+    request()->routeIs("review.create") ||
+    request()->routeIs("review.show") ||
+    request()->routeIs("review.edit")
+    ? "active" : "" }}">
+      <a class="nav-link" href="{{ route('review.index') }}">
+        <i class="fas fa-star"></i>
+        <span>Reviews</span>
+    </a>
 
+    </li>
 </ul>

@@ -22,7 +22,7 @@ class TeacherController extends Controller
 
     public function index()
     {
-        $teacher = Teacher::all();
+        $teacher = Teacher::latest()->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view('admin.teachers.index',compact('teacher','settings'));
     }
