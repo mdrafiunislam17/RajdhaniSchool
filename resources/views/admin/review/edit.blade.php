@@ -78,16 +78,16 @@
                 </div>
 
                 {{-- Rating --}}
-                <div class="form-group">
-                    <label class="font-weight-bold">Rating *</label>
-                    <div class="d-flex gap-2 text-warning rating-stars">
-                        @for ($i = 1; $i <= 5; $i++)
-                            <i class="fa{{ old('rating', $review->rating) >= $i ? 's' : 'r' }} fa-star fa-lg cursor-pointer" data-value="{{ $i }}"></i>
-                        @endfor
-                    </div>
-                    <input type="hidden" name="rating" id="rating" value="{{ old('rating', $review->rating) }}">
-                    @error('rating') <div class="text-danger mt-1">{{ $message }}</div> @enderror
-                </div>
+{{--                <div class="form-group">--}}
+{{--                    <label class="font-weight-bold">Rating *</label>--}}
+{{--                    <div class="d-flex gap-2 text-warning rating-stars">--}}
+{{--                        @for ($i = 1; $i <= 5; $i++)--}}
+{{--                            <i class="fa{{ old('rating', $review->rating) >= $i ? 's' : 'r' }} fa-star fa-lg cursor-pointer" data-value="{{ $i }}"></i>--}}
+{{--                        @endfor--}}
+{{--                    </div>--}}
+{{--                    <input type="hidden" name="rating" id="rating" value="{{ old('rating', $review->rating) }}">--}}
+{{--                    @error('rating') <div class="text-danger mt-1">{{ $message }}</div> @enderror--}}
+{{--                </div>--}}
 
                 <button type="submit" class="btn btn-success">Update Review</button>
             </form>

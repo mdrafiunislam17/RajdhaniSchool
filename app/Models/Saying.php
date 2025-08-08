@@ -14,6 +14,7 @@ class Saying extends Model
         'position',
         'description',
         'image',
+          'sort',
         'status',
     ];
 }

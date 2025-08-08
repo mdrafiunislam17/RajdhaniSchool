@@ -52,15 +52,15 @@
                     </div>
 
                     {{-- Rating --}}
-                    <div class="mb-3">
-                        <h6 class="font-weight-bold">Rating:</h6>
-                        <div class="text-warning">
-                            @for ($i = 1; $i <= 5; $i++)
-                                <i class="fa{{ $review->rating >= $i ? 's' : 'r' }} fa-star fa-lg"></i>
-                            @endfor
-                            <span class="text-muted ml-2">({{ $review->rating }}/5)</span>
-                        </div>
-                    </div>
+{{--                    <div class="mb-3">--}}
+{{--                        <h6 class="font-weight-bold">Rating:</h6>--}}
+{{--                        <div class="text-warning">--}}
+{{--                            @for ($i = 1; $i <= 5; $i++)--}}
+{{--                                <i class="fa{{ $review->rating >= $i ? 's' : 'r' }} fa-star fa-lg"></i>--}}
+{{--                            @endfor--}}
+{{--                            <span class="text-muted ml-2">({{ $review->rating }}/5)</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
                     {{-- Created At --}}
                     <div class="mb-3">

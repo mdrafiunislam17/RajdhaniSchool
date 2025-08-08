@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\Notice;
+use App\Models\Saying;
 use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Teacher;
@@ -39,8 +40,9 @@ class FrontController extends Controller
                 ->orderByDesc("event_date")
                 ->get();
         $blog  =   Blog::latest()->take(3)->get();
+        $saying = Saying::orderBy('sort', 'asc')->get();
         return view('front.index',compact('sliders','settings',
-            'about','teacher','notices','gallery','events','blog'));
+            'about','teacher','notices','gallery','events','blog','saying'));
     }
 
     public function aboutUs($title = null)
@@ -139,6 +141,24 @@ class FrontController extends Controller
         $blog = Blog::where('title', $title)->firstOrFail();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view('front.blogDetails', compact('blog','settings'));
+
+    }
+
+
+    public function sayings(){
+
+
+        $saying = Saying::where('status', 1)->orderBy('sort', 'asc')->get();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        return view('front.saying', compact('saying','settings'));
+    }
+
+    public function sayingDetails($name = null){
+
+        $saying = Saying::where('name', $name)->firstOrFail();
+        $sayings = Saying::where('status', 1)->orderBy('sort', 'asc')->get();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        return view('front.sayingDetails', compact('saying','sayings','settings'));
 
     }
 

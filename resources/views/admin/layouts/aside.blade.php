@@ -164,6 +164,21 @@
         </a>
     </li>
 
+
+
+    <li class="nav-item {{
+    request()->routeIs("saying.index") ||
+    request()->routeIs("saying.create") ||
+    request()->routeIs("saying.show") ||
+    request()->routeIs("saying.edit")
+    ? "active" : "" }}">
+        <a class="nav-link" href="{{ route('saying.index') }}">
+            <i class="fas fa-quote-right"></i>
+            <span>Saying</span>
+        </a>
+
+    </li>
+
  <li class="nav-item {{
     request()->routeIs("review.index") ||
     request()->routeIs("review.create") ||

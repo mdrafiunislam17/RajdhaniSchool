@@ -42,6 +42,7 @@ class ReviewController extends Controller
             "name" => "required",
             "image" => "nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048",
 
+
         ]);
 
         try {
@@ -66,7 +67,7 @@ class ReviewController extends Controller
                 ->with("error", "QueryException code: " . $exception->getCode());
         }
 
-        return redirect()->route('review.index')->with("success", "review has been inserted successfully.");
+        return redirect()->back()->with("success", "review has been inserted successfully.");
     }
 
        public function edit(Review $review)

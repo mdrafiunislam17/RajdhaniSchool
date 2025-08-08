@@ -166,7 +166,55 @@
 
 
 
-             <!-- TEACHER SECTION START -->
+        <!-- TEACHER SECTION START -->
+        <section class="bg-[#FAF9F6] py-[120px] xl:py-[80px] md:py-[60px] relative z-[1]">
+            <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+                <!-- heading -->
+                <div class="flex flex-wrap xs:flex-col xs:text-center justify-between items-center gap-y-[15px] mb-[46px] md:mb-[30px]">
+                    <div>
+
+                        <h2 class="text-green text-[28px] font-semibold uppercase tracking-wide mb-2">Our Saying & Member</h2>
+                    </div>
+
+                    <a href="{{route('sayings')}}" class="ed-btn !bg-transparent border border-edgreen !text-edgreen hover:!bg-edred hover:!text-white" >view all teacher <span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                </div>
+
+                <div class="grid grid-cols-3 sm:grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px]">
+                    <!-- single teacher -->
+                    @foreach ($saying as $item)
+                        <div class="ed-teacher group">
+                            <div class="ed-teacher__img rounded-[16px] overflow-hidden">
+                                <img src="{{ asset('uploads/saying/' . $item->image) }}" alt="{{ $item->name }}" class="w-full aspect-[370/375] duration-[400ms] group-hover:scale-110">
+                            </div>
+
+                            <div class="ed-teacher__txt bg-white relative z-[1] mx-[25px] lg:mx-[20px] md:mx-[15px] xs:mx-[5px] -mt-[44px] md:-mt-[15px] xs:mt-0 rounded-[16px] shadow-[0_4px_60px_rgba(18,96,254,0.12)] px-[25px] xl:px-[20px] md:px-[15px] pb-[30px] lg:pb-[25px] md:pb-[20px] before:w-full before:absolute before:-z-[1] before:h-full before:bg-white before:left-0 before:rounded-[16px] before:-top-[33px] before:skew-y-[4deg]">
+
+                                <h5 class="font-semibold text-[20px] text-etBlack mb-[4px]">
+
+
+                                    <a href="{{ route('sayingDetails', ['name' => $item->name]) }}" class="hover:text-etBlue">
+                                        {{ $item->name }}
+                                    </a>
+
+                                </h5>
+                                <span class="text-etGray text-[16px]">{{ $item->designation }}</span>
+                            </div>
+                        </div>
+                    @endforeach
+
+
+
+
+                </div>
+            </div>
+
+            <!-- vector -->
+
+        </section>
+        <!-- TEACHER SECTION END -->
+
+
+        <!-- TEACHER SECTION START -->
         <section class="bg-[#FAF9F6] py-[120px] xl:py-[80px] md:py-[60px] relative z-[1]">
             <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
                 <!-- heading -->
@@ -530,64 +578,22 @@
                             <h6 class="ed-section-sub-title">Testimonials</h6>
                             <h2 class="ed-section-title !text-[30px]">Students Feedback</h2>
                         </div>
-
                         <div class="flex xxs:flex-col gap-[15px] items-center relative pr-[35px]">
                             <div class="ed-testimonial-slider swiper max-w-full">
                                 <div class="swiper-wrapper">
-                                    <!-- single testimony -->
-                                    <div class="swiper-slide">
-                                        <div>
-                                            <div class="inline-flex gap-[6px] text-[14px] mb-[20px]">
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#BCBCBC]"><i class="fa-solid fa-star"></i></span>
-                                            </div>
-                                            <p class="text-edgray mb-[24px]">Nullam dignissim ante scelerisque the is euismod fermentum odio sem semper the is erat a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque.</p>
+                                    @foreach($saying as $item)
+                                        <div class="swiper-slide">
                                             <div>
-                                                <h6 class="font-semibold text-[18px] text-edblue mb-[4px]">Ronald Richards</h6>
-                                                <span class="text-edgray">Co, Founder</span>
+                                                <p class="text-edgray mb-[24px]">{!! $item->message !!}</p>
+                                                <div>
+                                                    <h6 class="font-semibold text-[18px] text-edblue mb-[4px]">{{ $item->name }}</h6>
+                                                    <span class="text-edgray">{!! $item->message !!}  </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <!-- single testimony -->
-                                    <div class="swiper-slide">
-                                        <div>
-                                            <div class="inline-flex gap-[6px] text-[14px] mb-[20px]">
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#BCBCBC]"><i class="fa-solid fa-star"></i></span>
-                                            </div>
-                                            <p class="text-edgray mb-[24px]">Nullam dignissim ante scelerisque the is euismod fermentum odio sem semper the is erat a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque.</p>
-                                            <div>
-                                                <h6 class="font-semibold text-[18px] text-edblue mb-[4px]">Ronald Richards</h6>
-                                                <span class="text-edgray">Co, Founder</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- single testimony -->
-                                    <div class="swiper-slide">
-                                        <div>
-                                            <div class="inline-flex gap-[6px] text-[14px] mb-[20px]">
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#F39F5F]"><i class="fa-solid fa-star"></i></span>
-                                                <span class="text-[#BCBCBC]"><i class="fa-solid fa-star"></i></span>
-                                            </div>
-                                            <p class="text-edgray mb-[24px]">Nullam dignissim ante scelerisque the is euismod fermentum odio sem semper the is erat a feugiat leo urna eget eros. Duis Aenean a imperdiet risus. Aliquam pellentesque.</p>
-                                            <div>
-                                                <h6 class="font-semibold text-[18px] text-edblue mb-[4px]">Ronald Richards</h6>
-                                                <span class="text-edgray">Co, Founder</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
+
                                 <div class="flex gap-[10px] items-center absolute z-[1] bottom-[10px] right-0 ed-testimonial-slider-controls">
                                     <button class="prev hover:text-edpurple"><i class="fa-solid fa-arrow-left-long"></i></button>
                                     <div class="ed-testimonial-slider-pagination font-semibold text-[14px] text-edblue"></div>
@@ -596,18 +602,21 @@
                             </div>
 
                             <!-- slider dots -->
-                            <div class="flex items-start flex-col xxs:hidden shrink-0 space-y-[40px] relative z-[1] before:absolute before:top-[50%] before:-translate-y-[50%] before:right-[28px] before:w-[138px] before:h-[420px] before:bg-[url('../assets/img/testimonial-img-slider-vector.svg')] before:bg-no-repeat before:bg-center before:bg-[length:100%_100%] before:-z-[1] before:opacity-10 before:pointer-events-none">
-                                <div class="rounded-full overflow-hidden inline-block border border-edpurple p-[5px] even:ml-[40px]">
-                                    <img src="{{asset('assets/img/students.jpg')}}" alt="user" class="rounded-full w-[90px] aspect-square">
-                                </div>
-                                <div class="rounded-full overflow-hidden inline-block border border-edpurple p-[5px] even:ml-[40px]">
-                                    <img src="{{asset('assets/img/students1.jpg')}}" alt="user" class="rounded-full w-[90px] aspect-square">
-                                </div>
-                                <div class="rounded-full overflow-hidden inline-block border border-edpurple p-[5px] even:ml-[40px]">
-                                    <img src="{{asset('assets/img/students2.jpg')}}" alt="user" class="rounded-full w-[90px] aspect-square">
-                                </div>
+                            <div class="flex items-start flex-col xxs:hidden shrink-0 space-y-[40px] relative z-[1]
+                                    before:absolute before:top-[50%] before:-translate-y-[50%] before:right-[28px]
+                                    before:w-[138px] before:h-[420px]
+                                    before:bg-[url('../assets/img/testimonial-img-slider-vector.svg')] before:bg-no-repeat
+                                    before:bg-center before:bg-[length:100%_100%] before:-z-[1] before:opacity-10 before:pointer-events-none">
+
+                                @foreach($saying as $item)
+                                    <div class="rounded-full overflow-hidden inline-block border border-edpurple p-[5px] even:ml-[40px]">
+                                        <img src="{{ asset('uploads/review/' . $item->image) }}" class="rounded-full w-[90px] aspect-square">
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
+
+
                     </div>
 
                     <!-- upcoming events -->
@@ -664,9 +673,92 @@
         <!-- TESTIMONIAL SECTION END -->
 
 
+        <section class="py-[120px] xl:py-[80px] md:py-[60px] relative z-[1] overflow-hidden">
+            <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+                <!-- Review Form BLOCK -->
+                <div class="mt-[50px]">
+                    <h2 class="font-semibold text-[22px] text-edblue mb-[17px]">Write a Review</h2>
+
+                    <form id="reviewForm" action="{{ route('review.store') }}" method="POST" enctype="multipart/form-data"
+                          class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
+                        @csrf
+
+                        <!-- Name Field -->
+                        <div>
+                            <label for="name" class="font-lato font-semibold text-edblue block mb-[12px]">
+                                Your Name <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" name="name" id="name" placeholder="Your Name"
+                                   class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none focus:ring-2 focus:ring-edblue"
+                                   value="{{ old('name') }}" required>
+                            <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Please enter your name</p>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div>
+                            <label for="email" class="font-lato font-semibold text-edblue block mb-[12px]">
+                                Your Email <span class="text-red-500">*</span>
+                            </label>
+                            <input type="email" name="email" id="email" placeholder="your@email.com"
+                                   class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none focus:ring-2 focus:ring-edblue"
+                                   value="{{ old('email') }}" required>
+                            <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email</p>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="col-span-2 xxs:col-span-1">
+                            <label for="message" class="font-lato font-semibold text-edblue block mb-[12px]">
+                                Your Message <span class="text-red-500">*</span>
+                            </label>
+                            <textarea name="message" id="message" placeholder="Share your experience..."
+                                      class="border border-[#ECECEC] h-[145px] p-[20px] rounded-[4px] w-full focus:outline-none focus:ring-2 focus:ring-edblue"
+                                      required>{{ old('message') }}</textarea>
+                            <p id="message-error" class="text-red-500 text-sm mt-1 hidden">Please enter your review message</p>
+                        </div>
+
+                        <!-- Image Upload -->
+                        <div>
+                            <label for="image" class="font-lato font-semibold text-edblue block mb-[12px]">
+                                Image <span class="text-red-500">*</span>
+                            </label>
+                            <input type="file" name="image" id="image"
+                                   class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none focus:ring-2 focus:ring-edblue"
+                                   accept="image/*" required>
+                            <p class="text-gray-500 text-sm mt-1">Max size: 5MB (JPEG, PNG, GIF)</p>
+                            <p id="image-error" class="text-red-500 text-sm mt-1 hidden">Please select an image</p>
+                        </div>
+
+                        <!-- Rating System -->
+                        <div class="hidden">
+                            <div class="col-span-2 xxs:col-span-1">
+                                <label class="font-lato font-semibold text-edblue block mb-[12px]">
+                                    Rating <span class="text-red-500">*</span>
+                                </label>
+                                <div id="rating-stars" class="flex gap-2 text-[24px] cursor-pointer">
+                                    @for($i = 1; $i <= 5; $i++)
+                                        <i class="far fa-star text-gray-400 hover:text-yellow-400 transition-colors"
+                                           data-value="{{ $i }}"
+                                           aria-label="Rate {{ $i }} out of 5"></i>
+                                    @endfor
+                                </div>
+                                <input type="hidden" name="rating" id="rating" value="{{ old('rating', 0) }}" required>
+                                <p id="rating-error" class="text-red-500 text-sm mt-1 hidden">Please select a rating</p>
+                            </div>
+                        </div>
 
 
-
+                        <!-- Submit Button -->
+                        <div class="col-span-2 xxs:col-span-1">
+                            <button type="submit" id="submitBtn"
+                                    class="bg-edpurple h-[55px] px-[24px] rounded-[10px] text-[16px] font-medium text-white hover:bg-edblue transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-edblue">
+                                Post Review
+                                <span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
         <!-- BLOG SECTION START -->
         <section class="py-[120px] xl:py-[80px] md:py-[60px] relative z-[1] overflow-hidden">
             <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
@@ -761,3 +853,162 @@
     </main>
 
 @endsection
+@push('styles')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        #rating-stars i {
+            color: #ccc;
+            cursor: pointer;
+        }
+        #rating-stars i.fas {
+            color: gold;
+        }
+    </style>
+
+
+@endpush
+
+@push('scripts')
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('reviewForm');
+            const stars = document.querySelectorAll('#rating-stars i');
+            const ratingInput = document.getElementById('rating');
+            const submitBtn = document.getElementById('submitBtn');
+            let formIsValid = false;
+
+            // Initialize rating stars
+            function initializeRating() {
+                const currentRating = parseInt(ratingInput.value);
+                if (currentRating > 0) {
+                    stars.forEach((star, index) => {
+                        if (index < currentRating) {
+                            star.classList.remove('far', 'text-gray-400');
+                            star.classList.add('fas', 'text-yellow-400');
+                        }
+                    });
+                }
+            }
+            initializeRating();
+
+            // Rating System
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const value = parseInt(this.getAttribute('data-value'));
+                    ratingInput.value = value;
+                    document.getElementById('rating-error').classList.add('hidden');
+
+                    stars.forEach((s, index) => {
+                        if (index < value) {
+                            s.classList.remove('far', 'text-gray-400');
+                            s.classList.add('fas', 'text-yellow-400');
+                        } else {
+                            s.classList.remove('fas', 'text-yellow-400');
+                            s.classList.add('far', 'text-gray-400');
+                        }
+                    });
+
+                    validateForm();
+                });
+
+                star.addEventListener('mouseover', function() {
+                    if (!this.classList.contains('fas')) {
+                        const value = parseInt(this.getAttribute('data-value'));
+
+                        stars.forEach((s, index) => {
+                            if (index < value && !s.classList.contains('fas')) {
+                                s.classList.add('text-yellow-300');
+                            }
+                        });
+                    }
+                });
+
+                star.addEventListener('mouseout', function() {
+                    const currentRating = parseInt(ratingInput.value);
+
+                    stars.forEach((s, index) => {
+                        if (index >= currentRating && s.classList.contains('text-yellow-300')) {
+                            s.classList.remove('text-yellow-300');
+                        }
+                    });
+                });
+            });
+
+            // Form Validation
+            function validateForm() {
+                formIsValid = true;
+
+                // Validate Name
+                const name = document.getElementById('name').value.trim();
+                if (name === '') {
+                    document.getElementById('name-error').classList.remove('hidden');
+                    formIsValid = false;
+                } else {
+                    document.getElementById('name-error').classList.add('hidden');
+                }
+
+                // Validate Email
+                const email = document.getElementById('email').value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    document.getElementById('email-error').classList.remove('hidden');
+                    formIsValid = false;
+                } else {
+                    document.getElementById('email-error').classList.add('hidden');
+                }
+
+                // Validate Message
+                const message = document.getElementById('message').value.trim();
+                if (message === '') {
+                    document.getElementById('message-error').classList.remove('hidden');
+                    formIsValid = false;
+                } else {
+                    document.getElementById('message-error').classList.add('hidden');
+                }
+
+                // Validate Image
+                const image = document.getElementById('image').value;
+                if (image === '') {
+                    document.getElementById('image-error').classList.remove('hidden');
+                    formIsValid = false;
+                } else {
+                    document.getElementById('image-error').classList.add('hidden');
+                }
+
+                // Validate Rating
+                if (ratingInput.value === '0') {
+                    document.getElementById('rating-error').classList.remove('hidden');
+                    formIsValid = false;
+                } else {
+                    document.getElementById('rating-error').classList.add('hidden');
+                }
+
+                return formIsValid;
+            }
+
+            // Validate on input
+            document.getElementById('name').addEventListener('input', validateForm);
+            document.getElementById('email').addEventListener('input', validateForm);
+            document.getElementById('message').addEventListener('input', validateForm);
+            document.getElementById('image').addEventListener('change', validateForm);
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                if (!validateForm()) {
+                    e.preventDefault();
+                    // Scroll to first error
+                    const firstError = document.querySelector('.text-red-500:not(.hidden)');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            });
+
+            // Initial validation check
+            validateForm();
+        });
+    </script>
+
+@endpush
+

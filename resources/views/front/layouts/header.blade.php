@@ -62,15 +62,8 @@
 {{--                            </ul>--}}
                         </li>
                         <li><a href="{{route('aboutUs')}}">About us</a></li>
-                        <li class="has-sub-menu relative">
-                            <a role="button">Courses</a>
+                         <li><a href="{{route('sayings')}}">Saying & Member</a></li>
 
-                            <ul class="ed-header-submenu">
-                                <li><a href="#">Courses Grid</a></li>
-                                <li><a href="#">Courses Filter</a></li>
-                                <li><a href="#">Course Details</a></li>
-                            </ul>
-                        </li>
                         <li class="has-sub-menu relative">
                             <a role="button">Pages</a>
 

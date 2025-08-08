@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('sayings', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer("sort")->nullable();
             $table->string('position');
             $table->text('description')->nullable();
             $table->string("image");

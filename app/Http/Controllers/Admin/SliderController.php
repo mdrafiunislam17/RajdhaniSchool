@@ -28,7 +28,7 @@ class SliderController extends Controller
 
     public function index(): View
     {
-        $sliders = Slider::all();
+        $sliders = Slider::orderBy('sort', 'asc')->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         return view('admin.sliders.index', compact('sliders','settings'));
     }
