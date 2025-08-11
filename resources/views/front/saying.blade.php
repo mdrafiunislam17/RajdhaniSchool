@@ -13,7 +13,7 @@
         <div class="relative z-10 mx-[19.71%]">
             <h1 class="font-semibold text-[clamp(35px,6vw,56px)] text-white">Saying & Member </h1>
             <ul class="flex items-center justify-center gap-[10px] text-white">
-                <li><a href="{{route('front.index')}}" class="text-edyellow">Home</a></li>
+                <li><a href="{{route('front.index')}}" class="text-green">Home</a></li>
                 <li><span class="text-[12px]"><i class="fa-solid fa-angle-double-right"></i></span></li>
                 <li>Saying & Member </li>
             </ul>
@@ -49,7 +49,7 @@
                                 {{ $item->name }}
                             </a>
                         </h5>
-                        <span class="text-etGray text-[16px]">{{ $item->designation }}</span>
+                        <span class="text-etGray text-[16px]">{{ $item->position }}</span>
                     </div>
                 </div>
                 @endforeach

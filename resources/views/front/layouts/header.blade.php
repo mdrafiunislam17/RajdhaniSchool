@@ -72,7 +72,7 @@
                                 <li><a href="{{route('notices')}}">Notices</a></li>
                                 <li><a href="{{route('event')}}">Events</a></li>
                                 <li><a href="{{route('gallerys')}}">Gallery</a></li>
-                                <li><a href="#">FAQ</a></li>
+                                {{-- <li><a href="#">FAQ</a></li> --}}
 {{--                                <li><a href="coming-soon.html">Coming Soon Page</a></li>--}}
 {{--                                <li><a href="404.html">Error 404</a></li>--}}
                             </ul>
@@ -93,7 +93,7 @@
                 <!-- right actions -->
                 <div class="flex items-center gap-x-[60px] xxs:gap-[30px]">
 
-                    <a href="#" class="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]">apply now</a>
+                    <a href="#" class="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]" style="background-color: green">apply now</a>
                 </div>
             </div>
 
@@ -102,4 +102,6 @@
         </div>
     </div>
 </header>
+
+
 <!-- HEADER SECTION END -->

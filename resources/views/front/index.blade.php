@@ -84,26 +84,66 @@
                     <!-- single feature -->
                     <div class="bg-[#FAF9F6] hover:bg-edgreen border-t-[7px] border-edred hover:border-edpurple duration-[400ms] p-[30px] sm:p-[25px] group relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/faeture-bg.jpg')] before:mix-blend-hard-light before:opacity-0 before:duration-[400ms] hover:before:opacity-15">
                       <span class="icon">
-                            <img src="assets/img/feature-2.svg" alt="feature" class="mb-[11px]">
+                            <img src="assets/img/feature-1.svg" alt="feature" class="mb-[11px]">
                         </span>
-                        <h4 class="font-semibold text-[24px] xl:text-[22px] mb-[3px] text-edblue"><a href="#" class="hover:text-edpurple">Academics </a></h4>
-                        <p class="text-black group-hover:text-black mb-[18px]">Eimply dummy text printing ypese tting industry. Ipsum has been the</p>
+                        <h4 class="font-semibold text-[24px] xl:text-[22px] mb-[3px] text-edblue"><a href="#" class="hover:text-edpurple">EIIN NO </a></h4>
+                        <p class="text-black group-hover:text-black mb-[18px]">17051705</p>
 {{--                        <a href="#" class="text-edblue hover:text-edpurple"><span class="text-[14px]"><i class="fa-solid fa-angle-right"></i></span> View More</a>--}}
                     </div>
 
                     <!-- single feature -->
                     <div class="bg-[#FAF9F6] hover:bg-edgreen border-t-[7px] border-edred hover:border-edpurple duration-[400ms] p-[30px] sm:p-[25px] group relative z-[1] before:absolute before:-z-[1] before:inset-0 before:bg-[url('../assets/img/faeture-bg.jpg')] before:mix-blend-hard-light before:opacity-0 before:duration-[400ms] hover:before:opacity-15">
                       <span class="icon">
-                            <img src="assets/img/feature-3.svg" alt="feature" class="mb-[11px]">
+                            <img src="assets/img/feature-1.svg" alt="feature" class="mb-[11px]">
                         </span>
-                        <h4 class="font-semibold text-[24px] xl:text-[22px] mb-[3px] text-edblue"><a href="#" class="hover:text-edpurple">Community</a></h4>
-                        <p class="text-edgray2 group-hover:text-black mb-[18px]">Eimply dummy text printing ypese tting industry. Ipsum has been the</p>
+                        <h4 class="font-semibold text-[24px] xl:text-[22px] mb-[3px] text-edblue"><a href="#" class="hover:text-edpurple">School Code</a></h4>
+                        <p class="text-edgray2 group-hover:text-black mb-[18px]">17051705</p>
 {{--                        <a href="#" class="text-edblue hover:text-edpurple"><span class="text-[14px]"><i class="fa-solid fa-angle-right"></i></span> View More</a>--}}
                     </div>
                 </div>
             </div>
         </section>
         <!-- FEATURES SECTION END -->
+
+
+{{-- <section class="ed-2-about bg-edoffwhite py-[120px] xl:py-[80px] md:py-[60px] relative z-[1] before:absolute before:inset-0 before:-z-[1] before:bg-[url('../assets/img/about-us-bg.png')] before:opacity-[5%] before:bg-no-repeat before:bg-cover before:bg-center before:mix-blend-multiply">
+    <div class="mx-[19.7%] xxxl:mx-[14.7%] xxl:mx-[9.7%] xl:mx-[3.2%] md:mx-[15px]">
+
+        <div class="overflow-hidden whitespace-nowrap bg-green-500 py-3 rounded">
+            <div class="animate-marquee inline-block whitespace-nowrap">
+                @foreach ($notices as $notice)
+                    <a href="{{ route('titleDetails', ['title' => $notice->title]) }}"
+                       class="mx-6 text-white hover:underline">
+                        {{ $notice->title }}
+                    </a>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section> --}}
+
+<div style="background-color: green; padding: 10px; display: flex; align-items: center;">
+    {{-- Fixed Notice Label --}}
+    <strong style="color: white; margin-right: 20px; flex-shrink: 0;">
+        Notice:
+    </strong>
+
+    {{-- Scrolling Notices --}}
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        @foreach ($notices as $notice)
+            <a href="{{ route('titleDetails', ['title' => $notice->title]) }}"
+               style="margin-right: 40px; color: white; text-decoration: none;">
+                {{ $notice->title }}
+            </a>
+        @endforeach
+    </marquee>
+</div>
+
+
+
+
+
+
 
         <!-- ABOUT SECTION START -->
         <section class="ed-2-about bg-edoffwhite py-[120px] xl:py-[80px] md:py-[60px] relative z-[1] before:absolute before:inset-0 before:-z-[1] before:bg-[url('../assets/img/about-us-bg.png')] before:opacity-[5%] before:bg-no-repeat before:bg-cover before:bg-center before:mix-blend-multiply">
@@ -196,8 +236,9 @@
                                         {{ $item->name }}
                                     </a>
 
+
                                 </h5>
-                                <span class="text-etGray text-[16px]">{{ $item->designation }}</span>
+                                <span class="text-etGray text-[16px]">{{ $item->position  }}</span>
                             </div>
                         </div>
                     @endforeach
@@ -345,7 +386,7 @@
                         <div class="p-[40px] pr-0 lg:pr-[40px] text-center">
                             <img src="{{asset('assets/img/Admission.png')}}" alt="form image" class="mx-auto drop-shadow-[0_4px_30px_rgba(0,0,0,0.1)] mb-[17px]">
                             <h5 class="text-[20px] text-edblue mb-[28px]">Free  Admission Online Form</h5>
-                            <a href="assets/pdf/notice.pdf" download class="ed-btn">apply now</a>
+                            <a href="#" download class="ed-btn" style="background-color: green">apply now</a>
                         </div>
                     </div>
 
@@ -568,204 +609,144 @@
 
 
         <!-- TESTIMONIAL SECTION START -->
-        <section class="py-[120px] xl:py-[80px] md:py-[60px]">
-            <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-                <div class="flex md:flex-col items-start gap-y-[40px]">
-                    <!-- testimonial -->
-                    <div class="max-w-[50%] md:max-w-full">
-                        <!-- heading -->
-                        <div class="pb-[40px] sm:pb-[20px] bg-[url('../assets/img/testimonial-heading-vector.svg')] bg-no-repeat bg-left-bottom bg-[length:1000px] mb-[40px]  md:bg-none md:mb-0">
-                            <h6 class="ed-section-sub-title">Testimonials</h6>
-                            <h2 class="ed-section-title !text-[30px]">Students Feedback</h2>
+      {{-- <section class="py-[120px] xl:py-[80px] md:py-[60px]">
+        <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+            <div class="flex md:flex-col items-start gap-y-[40px]">
+
+                <!-- Upcoming Events -->
+                <div>
+                    <!-- Heading -->
+                    <div class="pb-[40px] sm:pb-[20px] flex justify-end md:justify-start
+                                bg-[url('../assets/img/testimonial-heading-vector.svg')] bg-no-repeat bg-right-bottom
+                                bg-[length:1000px] mb-[40px] md:bg-none md:mb-0">
+                        <div>
+                            <h6 class="ed-section-sub-title">Event</h6>
+                            <h2 class="ed-section-title !text-[30px]">Upcoming Events</h2>
                         </div>
-                        <div class="flex xxs:flex-col gap-[15px] items-center relative pr-[35px]">
-                            <div class="ed-testimonial-slider swiper max-w-full">
-                                <div class="swiper-wrapper">
-                                    @foreach($saying as $item)
-                                        <div class="swiper-slide">
-                                            <div>
-                                                <p class="text-edgray mb-[24px]">{!! $item->message !!}</p>
-                                                <div>
-                                                    <h6 class="font-semibold text-[18px] text-edblue mb-[4px]">{{ $item->name }}</h6>
-                                                    <span class="text-edgray">{!! $item->message !!}  </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-
-                                <div class="flex gap-[10px] items-center absolute z-[1] bottom-[10px] right-0 ed-testimonial-slider-controls">
-                                    <button class="prev hover:text-edpurple"><i class="fa-solid fa-arrow-left-long"></i></button>
-                                    <div class="ed-testimonial-slider-pagination font-semibold text-[14px] text-edblue"></div>
-                                    <button class="next hover:text-edpurple"><i class="fa-solid fa-arrow-right-long"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- slider dots -->
-                            <div class="flex items-start flex-col xxs:hidden shrink-0 space-y-[40px] relative z-[1]
-                                    before:absolute before:top-[50%] before:-translate-y-[50%] before:right-[28px]
-                                    before:w-[138px] before:h-[420px]
-                                    before:bg-[url('../assets/img/testimonial-img-slider-vector.svg')] before:bg-no-repeat
-                                    before:bg-center before:bg-[length:100%_100%] before:-z-[1] before:opacity-10 before:pointer-events-none">
-
-                                @foreach($saying as $item)
-                                    <div class="rounded-full overflow-hidden inline-block border border-edpurple p-[5px] even:ml-[40px]">
-                                        <img src="{{ asset('uploads/review/' . $item->image) }}" class="rounded-full w-[90px] aspect-square">
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-
-
                     </div>
 
-                    <!-- upcoming events -->
-                    <div>
-                        <!-- heading -->
-                        <div class="pb-[40px] sm:pb-[20px] flex justify-end md:justify-start bg-[url('../assets/img/testimonial-heading-vector.svg')] bg-no-repeat bg-right-bottom bg-[length:1000px] mb-[40px] md:bg-none md:mb-0">
-                            <div>
-                                <h6 class="ed-section-sub-title">Event</h6>
-                                <h2 class="ed-section-title !text-[30px]">Upcoming Events</h2>
-                            </div>
-                        </div>
-                        <div class="grow space-y-[30px]">
-                            @forelse($events as $event)
-                                @php
-                                    $date = \Carbon\Carbon::parse($event->event_date);
-                                @endphp
+                    <!-- Events List -->
+                    <div class="grow space-y-[30px]">
+                        @forelse($events as $event)
+                            @php
+                                $date = \Carbon\Carbon::parse($event->event_date);
+                            @endphp
 
-                                    <!-- single upcoming event -->
-                                <div class="bg-white flex lg:flex-col items-start gap-x-[20px] gap-y-[10px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] rounded-[20px] p-[30px] xxs:p-[20px]">
-                                    <!-- date -->
-                                    <div class="bg-edyellow rounded-[10px] font-medium text-[16px] text-black inline-block uppercase overflow-hidden text-center shrink-0">
-                                        <span class="bg-edpurple text-white text-[20px] block py-[7px] px-[30px] rounded-[10px]">
-                                            {{ $date->format('Y') }}
-                                        </span>
-                                        <span class="px-[15px] p-[10px] block leading-[1.44] font-semibold">
-                                            {{ $date->format('d') }} <span class="block">{{ $date->format('M') }}</span>
-                                        </span>
-                                    </div>
+                            <!-- Single Upcoming Event -->
+                            <div class="bg-white flex lg:flex-col items-start gap-x-[20px] gap-y-[10px]
+                                        shadow-[0_4px_30px_rgba(0,0,0,0.1)] rounded-[20px] p-[30px] xxs:p-[20px]">
 
-                                    <!-- text -->
-                                    <div>
-                                        <h5 class="font-semibold text-[20px] mb-[7px]">
-                                            <a href=" {{ route('eventDetails', ['event_name' => $event->event_name]) }} " class="hover:text-edpurple">{{ $event->event_name }}</a>
-                                        </h5>
-                                        <h6 class="text-edpurple font-medium">
-                                            {{ \Carbon\Carbon::parse($event->start_time)->format('H:i') }} -
-                                            {{ \Carbon\Carbon::parse($event->end_time)->format('H:i') }}
-                                        </h6>
-                                        <p class="border-t border-[#002147]/20 pt-[17px] mt-[10px]">
-                                            {{ Str::limit($event->short_description, 100) }}
-                                        </p>
-                                    </div>
+                                <!-- Date -->
+                                <div class="bg-edyellow rounded-[10px] font-medium text-[16px] text-black
+                                            inline-block uppercase overflow-hidden text-center shrink-0">
+                                    <span class="bg-edpurple text-white text-[20px] block py-[7px] px-[30px] rounded-[10px]">
+                                        {{ $date->format('Y') }}
+                                    </span>
+                                    <span class="px-[15px] p-[10px] block leading-[1.44] font-semibold">
+                                        {{ $date->format('d') }}
+                                        <span class="block">{{ $date->format('M') }}</span>
+                                    </span>
                                 </div>
-                            @empty
-                                <p class="text-center text-gray-500">No upcoming events available.</p>
-                            @endforelse
-                        </div>
 
-
-
+                                <!-- Event Info -->
+                                <div>
+                                    <h5 class="font-semibold text-[20px] mb-[7px]">
+                                        <a href="{{ route('eventDetails', ['event_name' => $event->event_name]) }}"
+                                        class="hover:text-edpurple">
+                                            {{ $event->event_name }}
+                                        </a>
+                                    </h5>
+                                    <h6 class="text-edpurple font-medium">
+                                        {{ \Carbon\Carbon::parse($event->start_time)->format('H:i') }} -
+                                        {{ \Carbon\Carbon::parse($event->end_time)->format('H:i') }}
+                                    </h6>
+                                    <p class="border-t border-[#002147]/20 pt-[17px] mt-[10px]">
+                                        {{ Str::limit($event->short_description, 100) }}
+                                    </p>
+                                </div>
+                            </div>
+                        @empty
+                            <p class="text-center text-gray-500">No upcoming events available.</p>
+                        @endforelse
                     </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section> --}}
+
+
+       <!-- heading -->
+
+        >
+
+     <div class="py-[120px] xl:py-[80px] md:py-[60px]">
+            <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+                <!-- event cards -->
+                  <div class="text-center mb-[46px] md:mb-[30px]">
+                    <h6 class="text-green text-[18px] font-semibold uppercase tracking-wide mb-2">Events</h6>
+                    <h2 class="text-green text-[28px] font-semibold uppercase tracking-wide mb-2">Upcoming Events</h2>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-1 gap-[30px] md:gap-[20px]">
+
+
+                    @php
+                        use Carbon\Carbon;
+                    @endphp
+
+                    @foreach($events as $event)
+                        @php
+                            $eventDate = Carbon::parse($event->event_date);
+                            $startTime = Carbon::parse($event->start_time)->format('H:i');
+                            $endTime = Carbon::parse($event->end_time)->format('H:i');
+                        @endphp
+
+                        <div class="bg-white flex lg:flex-col items-start gap-x-[20px] gap-y-[10px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] rounded-[20px] p-[30px] xxs:p-[20px]">
+
+                            <!-- date -->
+                            <div class="bg-edyellow rounded-[10px] font-medium text-[16px] text-black inline-block uppercase overflow-hidden text-center shrink-0">
+                                <span class="bg-edpurple text-white text-[20px] block py-[7px] px-[30px] rounded-[10px]">
+                                    {{ $eventDate->format('Y') }}
+                                </span>
+                                <span class="px-[15px] p-[10px] block leading-[1.44] font-semibold">
+                                    {{ $eventDate->format('d') }}
+                                    <span class="block">{{ $eventDate->format('M') }}</span>
+                                </span>
+                            </div>
+
+                            <!-- text -->
+                            <div>
+                                <h5 class="font-semibold text-[20px] mb-[7px]">
+                                    <a href="#" class="hover:text-edpurple">
+                                        {{ $event->event_name }}
+                                    </a>
+                                </h5>
+                                <h6 class="text-edpurple font-medium">{{ $startTime }} - {{ $endTime }}</h6>
+                                <p class="border-t border-[#002147]/20 pt-[17px] mt-[10px]">
+                                    {{ Str::limit($event->short_description, 120) }}
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+
+
+            </div>
+        </div>
+
         <!-- TESTIMONIAL SECTION END -->
 
 
-        <section class="py-[120px] xl:py-[80px] md:py-[60px] relative z-[1] overflow-hidden">
-            <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-                <!-- Review Form BLOCK -->
-                <div class="mt-[50px]">
-                    <h2 class="font-semibold text-[22px] text-edblue mb-[17px]">Write a Review</h2>
 
-                    <form id="reviewForm" action="{{ route('review.store') }}" method="POST" enctype="multipart/form-data"
-                          class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
-                        @csrf
-
-                        <!-- Name Field -->
-                        <div>
-                            <label for="name" class="font-lato font-semibold text-edblue block mb-[12px]">
-                                Your Name <span class="text-red-500">*</span>
-                            </label>
-                            <input type="text" name="name" id="name" placeholder="Your Name"
-                                   class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none focus:ring-2 focus:ring-edblue"
-                                   value="{{ old('name') }}" required>
-                            <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Please enter your name</p>
-                        </div>
-
-                        <!-- Email Field -->
-                        <div>
-                            <label for="email" class="font-lato font-semibold text-edblue block mb-[12px]">
-                                Your Email <span class="text-red-500">*</span>
-                            </label>
-                            <input type="email" name="email" id="email" placeholder="your@email.com"
-                                   class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none focus:ring-2 focus:ring-edblue"
-                                   value="{{ old('email') }}" required>
-                            <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email</p>
-                        </div>
-
-                        <!-- Message Field -->
-                        <div class="col-span-2 xxs:col-span-1">
-                            <label for="message" class="font-lato font-semibold text-edblue block mb-[12px]">
-                                Your Message <span class="text-red-500">*</span>
-                            </label>
-                            <textarea name="message" id="message" placeholder="Share your experience..."
-                                      class="border border-[#ECECEC] h-[145px] p-[20px] rounded-[4px] w-full focus:outline-none focus:ring-2 focus:ring-edblue"
-                                      required>{{ old('message') }}</textarea>
-                            <p id="message-error" class="text-red-500 text-sm mt-1 hidden">Please enter your review message</p>
-                        </div>
-
-                        <!-- Image Upload -->
-                        <div>
-                            <label for="image" class="font-lato font-semibold text-edblue block mb-[12px]">
-                                Image <span class="text-red-500">*</span>
-                            </label>
-                            <input type="file" name="image" id="image"
-                                   class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none focus:ring-2 focus:ring-edblue"
-                                   accept="image/*" required>
-                            <p class="text-gray-500 text-sm mt-1">Max size: 5MB (JPEG, PNG, GIF)</p>
-                            <p id="image-error" class="text-red-500 text-sm mt-1 hidden">Please select an image</p>
-                        </div>
-
-                        <!-- Rating System -->
-                        <div class="hidden">
-                            <div class="col-span-2 xxs:col-span-1">
-                                <label class="font-lato font-semibold text-edblue block mb-[12px]">
-                                    Rating <span class="text-red-500">*</span>
-                                </label>
-                                <div id="rating-stars" class="flex gap-2 text-[24px] cursor-pointer">
-                                    @for($i = 1; $i <= 5; $i++)
-                                        <i class="far fa-star text-gray-400 hover:text-yellow-400 transition-colors"
-                                           data-value="{{ $i }}"
-                                           aria-label="Rate {{ $i }} out of 5"></i>
-                                    @endfor
-                                </div>
-                                <input type="hidden" name="rating" id="rating" value="{{ old('rating', 0) }}" required>
-                                <p id="rating-error" class="text-red-500 text-sm mt-1 hidden">Please select a rating</p>
-                            </div>
-                        </div>
-
-
-                        <!-- Submit Button -->
-                        <div class="col-span-2 xxs:col-span-1">
-                            <button type="submit" id="submitBtn"
-                                    class="bg-edpurple h-[55px] px-[24px] rounded-[10px] text-[16px] font-medium text-white hover:bg-edblue transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-edblue">
-                                Post Review
-                                <span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
         <!-- BLOG SECTION START -->
         <section class="py-[120px] xl:py-[80px] md:py-[60px] relative z-[1] overflow-hidden">
             <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
                 <!-- heading -->
                 <div class="text-center mb-[46px] md:mb-[30px]">
-                    <h6 class="ed-section-sub-title">Latest Blog</h6>
-                    <h2 class="ed-section-title">Our Latest News</h2>
+                    <h6 class="text-green text-[18px] font-semibold uppercase tracking-wide mb-2">Latest Blog</h6>
+                    <h2 class="text-green text-[28px] font-semibold uppercase tracking-wide mb-2">Our Latest News</h2>
                 </div>
 
                 <!-- blog cards -->

@@ -32,8 +32,8 @@
             <div class="flex lg:flex-col items-end gap-[130px] xxxl:gap-[100px] xxl:gap-[60px] lg:gap-y-0 ml-[19.5%] xxxl:ml-[14.71%] xxl:ml-[9.71%] xl:ml-[5.71%] lg:mx-[5.71%] md:mx-[12px]">
                 <!-- left / text -->
                 <div class="py-[120px] xl:py-[80px] md:py-[60px]">
-                    <h6 class="ed-section-sub-title">About us</h6>
-                    <h2 class="ed-section-title mb-[28px]">{{$about->title}}</h2>
+                    <h6 class="text-green text-[18px] font-semibold uppercase tracking-wide mb-2">About us</h6>
+                    <h2 class="text-green text-[28px] font-semibold uppercase tracking-wide mb-2">{{$about->title}}</h2>
                     <p class="text-edgray mb-[11px]">{!! $about->description !!}</p>
 
 

@@ -60,7 +60,7 @@
                                 {{ $item->name }}
                             </a>
                         </h5>
-                        <span class="text-etGray text-[16px]">{{ $item->designation }}</span>
+                        <span class="text-etGray text-[16px]">{{ $item->position }}</span>
                     </div>
                 </div>
                 @endforeach
