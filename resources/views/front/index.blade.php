@@ -122,13 +122,13 @@
     </div>
 </section> --}}
 
-<div style="background-color: green; padding: 10px; display: flex; align-items: center;">
-    {{-- Fixed Notice Label --}}
+{{-- <div style="background-color: green; padding: 10px; display: flex; align-items: center;">
+
     <strong style="color: white; margin-right: 20px; flex-shrink: 0;">
         Notice:
     </strong>
 
-    {{-- Scrolling Notices --}}
+
     <marquee behavior="scroll" direction="left" scrollamount="5">
         @foreach ($notices as $notice)
             <a href="{{ route('titleDetails', ['title' => $notice->title]) }}"
@@ -137,7 +137,7 @@
             </a>
         @endforeach
     </marquee>
-</div>
+</div> --}}
 
 
 

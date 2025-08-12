@@ -36,6 +36,7 @@ class FrontController extends Controller
                     ->latest()
                     ->get();
         $notices  =   Notice::latest()->take(3)->get();
+        // $notice  =   Notice::all();
         $gallery = Gallery::latest()->get();
         $events = Event::query()
                 ->where("status", 1)
@@ -52,8 +53,9 @@ class FrontController extends Controller
     {
         $about = About::first();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        $notices  =   Notice::latest()->take(3)->get();
 
-        return view('front.about', compact('about','settings'));
+        return view('front.about', compact('about','settings','notices'));
     }
 
 
@@ -62,7 +64,8 @@ class FrontController extends Controller
 
         $teacher = Teacher::where('status', 1)->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        return view('front.teachers', compact('teacher','settings'));
+        $notices  =   Notice::latest()->take(3)->get();
+        return view('front.teachers', compact('teacher','settings','notices'));
     }
 
     public function teacherdetails($name = null){
@@ -72,9 +75,10 @@ class FrontController extends Controller
             ->where("status", 1)
             ->latest()
             ->get();
+            $notices  =   Notice::latest()->take(3)->get();
 
          $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-         return view('front.teacherdetails', compact('teacher','teachers','settings'));
+         return view('front.teacherdetails', compact('teacher','teachers','notices','settings'));
 
     }
 
@@ -88,9 +92,10 @@ class FrontController extends Controller
 
 
     public function noticeDetails($title = null){
+        $notices  =   Notice::latest()->take(3)->get();
         $notice = Notice::where('title', $title)->firstOrFail();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        return view('front.noticeDetails', compact('notice','settings'));
+        return view('front.noticeDetails', compact('notice','notices','settings'));
     }
 
 
@@ -98,7 +103,8 @@ class FrontController extends Controller
     {
         $gallery = Gallery::all();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        return view('front.gallery', compact('gallery','settings'));
+        $notices  =   Notice::latest()->take(3)->get();
+        return view('front.gallery', compact('gallery','settings','notices'));
     }
 
     public function event()
@@ -119,8 +125,9 @@ class FrontController extends Controller
         $events = $pastEvents->merge($upcomingEvents);
 
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        $notices  =   Notice::latest()->take(3)->get();
 
-        return view('front.event', compact('events', 'settings'));
+        return view('front.event', compact('events', 'settings','notices'));
     }
 
 
@@ -128,7 +135,8 @@ class FrontController extends Controller
     {
         $event = Event::where('event_name', $event_name)->firstOrFail();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        return view('front.eventDetails', compact('event','settings'));
+        $notices  =   Notice::latest()->take(3)->get();
+        return view('front.eventDetails', compact('event','settings','notices'));
 
     }
 
@@ -136,14 +144,16 @@ class FrontController extends Controller
     public function blog(){
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         $blogs  =   Blog::all();
-        return view('front.blog', compact('blogs','settings'));
+        $notices  =   Notice::latest()->take(3)->get();
+        return view('front.blog', compact('blogs','settings','notices'));
     }
 
         public  function blogDetails ($title = null)
     {
         $blog = Blog::where('title', $title)->firstOrFail();
+        $notices  =   Notice::latest()->take(3)->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        return view('front.blogDetails', compact('blog','settings'));
+        return view('front.blogDetails', compact('blog','settings','notices'));
 
     }
 
@@ -152,16 +162,19 @@ class FrontController extends Controller
 
 
         $saying = Saying::where('status', 1)->orderBy('sort', 'asc')->get();
+        $notices  =   Notice::latest()->take(3)->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        return view('front.saying', compact('saying','settings'));
+        return view('front.saying', compact('saying','settings','notices'));
     }
 
     public function sayingDetails($name = null){
 
         $saying = Saying::where('name', $name)->firstOrFail();
         $sayings = Saying::where('status', 1)->orderBy('sort', 'asc')->get();
+        $notices  =   Notice::latest()->take(3)->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        return view('front.sayingDetails', compact('saying','sayings','settings'));
+        return view('front.sayingDetails', compact('saying','sayings','settings','notices'));
+
 
     }
 
@@ -170,9 +183,9 @@ class FrontController extends Controller
           public function contactUS()
         {
 
-
+            $notices  =   Notice::latest()->take(3)->get();
             $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-            return view('front.contact',compact('settings',
+            return view('front.contact',compact('settings','notices'
 
                 ));
         }
@@ -183,9 +196,9 @@ class FrontController extends Controller
 
                  $class = SchoolClass::all();
 
-
+                $notices  =   Notice::latest()->take(3)->get();
                 $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-                return view('front.admissionOnline',compact('settings', 'class'
+                return view('front.admissionOnline',compact('settings', 'class','notices'
 
                     ));
             }
@@ -233,9 +246,9 @@ class FrontController extends Controller
     $student = $query->get();
 
     $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-
+    $notices  =   Notice::latest()->take(3)->get();
     // Pass filtered students as $student to view
-    return view('front.students', compact('settings', 'student'));
+    return view('front.students', compact('settings', 'student','notices'));
 }
 
 
@@ -246,14 +259,16 @@ public function syllabui(){
 
         $syllabus = Syllabus::where('status', 1)->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        return view('front.syllabui', compact('syllabus','settings'));
+        $notices  =   Notice::latest()->take(3)->get();
+        return view('front.syllabui', compact('syllabus','settings','notices'));
     }
 
 
     public function syllabuiDetails($title = null){
         $syllabus = Syllabus::where('title', $title)->firstOrFail();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        return view('front.syllabuiDetails', compact('syllabus','settings'));
+        $notices  =   Notice::latest()->take(3)->get();
+        return view('front.syllabuiDetails', compact('syllabus','settings','notices'));
     }
 
 

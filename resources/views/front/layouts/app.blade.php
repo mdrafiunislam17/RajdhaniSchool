@@ -38,6 +38,36 @@
     <!-- custom css -->
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     @stack("styles")
+
+    <style>
+
+
+       .marquee-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.animate-marquee {
+    display: inline-block;
+    padding-left: 100%; /* Start offset */
+    animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+
+    </style>
 </head>
 
 <body>

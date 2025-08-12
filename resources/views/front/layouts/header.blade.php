@@ -1,4 +1,8 @@
-<!-- HEADER SECTION START -->
+
+
+
+
+        <!-- HEADER SECTION START -->
 <header class="absolute z-[99] top-0 inset-x-[100px] xxl:inset-x-[30px] xl:inset-x-0 bg-white rounded-bl-[10px] rounded-br-[10px]">
     <!-- top header -->
 {{--    <div class="bg-edblue flex items-center justify-between lg:justify-center lg:gap-x-[20px]">--}}
@@ -23,6 +27,21 @@
 {{--        <!-- notice -->--}}
 {{--        <p class="font-medium text-white text-[16px] xxs:text-[14px] xl:pl-[15px] lg:order-1 lg:w-full lg:my-[10px] text-center lg:text-left sm:text-center">Edutics Flash Discount: Starting at <span class="text-edyellow">$3.49/mo</span> for a Limited time</p>--}}
 
+            <div class="notice bg-black text-white p-2 overflow-hidden" style="background-color: green; height: 30px;">
+                <span class="font-bold mr-2">Notice:</span>
+                <div class="marquee-wrapper inline-block overflow-hidden whitespace-nowrap" style="width: calc(100% - 70px);">
+                    <div class="animate-marquee text-yellow-400">
+
+                           @foreach ($notices as $item)
+                            <a href="{{ route('titleDetails', ['title' => $item->title]) }}"
+                            style="margin-right: 40px; color: white; text-decoration: none;">
+                                {{ $item->title }}
+                            </a>
+                        @endforeach
+
+                    </div>
+                </div>
+            </div>
 {{--        <!-- actions -->--}}
 {{--        <div class="shrink-0 flex items-center gap-x-[30px] xl:gap-x-[15px] text-white lg:order-3 sm:hidden">--}}
 {{--            <div class="flex gap-x-[30px] xl:gap-x-[15px]">--}}
@@ -104,6 +123,8 @@
         </div>
     </div>
 </header>
+
+
 
 
 <!-- HEADER SECTION END -->
