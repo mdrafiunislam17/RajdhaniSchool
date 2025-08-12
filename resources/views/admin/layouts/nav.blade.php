@@ -8,7 +8,7 @@
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" target="_blank" href="{{ route("home") }}"><i class="fa fa-globe"></i>&nbsp;jaisbd.com</a>
+            <a class="nav-link" target="_blank" href="{{ route("front.index") }}"><i class="fa fa-globe"></i>&nbsp;rsc-edu-bd.com</a>
         </li>
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"

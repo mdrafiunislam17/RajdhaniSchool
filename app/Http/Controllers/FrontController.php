@@ -11,6 +11,9 @@ use App\Models\Saying;
 use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\Teacher;
+use App\Models\SchoolClass;
+use App\Models\Student;
+use App\Models\Syllabus;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -161,5 +164,97 @@ class FrontController extends Controller
         return view('front.sayingDetails', compact('saying','sayings','settings'));
 
     }
+
+
+
+          public function contactUS()
+        {
+
+
+            $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+            return view('front.contact',compact('settings',
+
+                ));
+        }
+
+            public function admissionOnline()
+            {
+
+
+                 $class = SchoolClass::all();
+
+
+                $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+                return view('front.admissionOnline',compact('settings', 'class'
+
+                    ));
+            }
+
+
+
+            // public function students(Request $request)
+            // {
+
+            //     $student = Student::all();
+
+            //      $query = Student::query();
+
+            //     // Filter by class if selected
+            //     if ($request->filled('class')) {
+            //         $query->where('class', $request->input('class'));
+            //     }
+
+            //     // Filter by section if selected and not 'N/A'
+            //     if ($request->filled('section') && $request->section !== 'N/A') {
+            //         $query->where('section', $request->input('section'));
+            //     }
+
+            //     // Get filtered students with pagination or all
+            //     $students = $query->get();
+            //      $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+            //     return view('front.students',compact('settings','student'));
+            // }
+
+            public function students(Request $request)
+{
+    $query = Student::query();
+
+    // Filter by class if selected
+    if ($request->filled('class')) {
+        $query->where('class', $request->input('class'));
+    }
+
+    // Filter by section if selected and not 'N/A'
+    if ($request->filled('section') && $request->section !== 'N/A') {
+        $query->where('section', $request->input('section'));
+    }
+
+    // Get filtered students (all or filtered)
+    $student = $query->get();
+
+    $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+
+    // Pass filtered students as $student to view
+    return view('front.students', compact('settings', 'student'));
+}
+
+
+
+
+public function syllabui(){
+
+
+        $syllabus = Syllabus::where('status', 1)->get();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        return view('front.syllabui', compact('syllabus','settings'));
+    }
+
+
+    public function syllabuiDetails($title = null){
+        $syllabus = Syllabus::where('title', $title)->firstOrFail();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        return view('front.syllabuiDetails', compact('syllabus','settings'));
+    }
+
 
 }

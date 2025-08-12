@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="{{asset('favicon.svg')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset("uploads/" . $settings["SETTING_SITE_FAVICON"] ?? 'favicon.ico') }}" type="image/x-icon">
 
     <!-- plugins & libraries css -->
     <link rel="stylesheet" href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}">
@@ -32,7 +32,7 @@
                         edgray2: '#6C757D',
                     }
                 }
-            }
+
         }
     </script
     <!-- custom css -->

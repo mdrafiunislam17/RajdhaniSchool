@@ -1,13 +1,13 @@
 @extends("admin.layouts.master")
-@section("title", "Teacher")
+@section("title", "syllabus")
 @section("content")
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Teacher & Employee</h1>
-            <a href="{{ route("teacher.create") }}"
+            <h1 class="h3 mb-0 text-gray-800">syllabus</h1>
+            <a href="{{ route("syllabus.create") }}"
                class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-plus fa-sm text-white-50"></i> Create teacher</a>
+                    class="fas fa-plus fa-sm text-white-50"></i> Create syllabus</a>
         </div>
 
         @if (session()->has("success"))
@@ -35,25 +35,16 @@
                         <thead>
                         <tr>
                             <th>#SL</th>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Phone</th>
-                            <th>Image</th>
+                            <th>title</th>
                             <th>Status</th>
                             <th style="width: 100px">Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach( $teacher as $i => $item)
+                        @foreach( $syllabus as $i => $item)
                             <tr>
                                 <td>{{ ++$i }}</td>
-                                <td>{{ $item->name }}</td>
-                                <td>{{ $item->position }}</td>
-                                <td>{{ $item->phone }}</td>
-                                <td>
-                                    <img src="{{ asset('uploads/teacher/' . $item->image) }}" width="100" alt="item Icon">
-
-                                </td>
+                                <td>{{ $item->title }}</td>
                                 <td>
                                     @if ($item->status == 1)
                                         <span class="badge badge-success badge-counter">Active</span>
@@ -65,9 +56,9 @@
                                 <td>
                                     {{--                                    <a href="{{ route("$clients.show", $client->id) }}" class="btn btn-sm"><i--}}
                                     {{--                                            class="fa fa-eye"></i></a>--}}
-                                    <a href="{{ route("teacher.edit", $item->id) }}" class="btn btn-sm btn-warning"><i
+                                    <a href="{{ route("syllabus.edit", $item->id) }}" class="btn btn-sm btn-warning"><i
                                             class="fa fa-edit"></i></a>
-                                    <form action="{{ route('teacher.destroy', $item->id) }}" method="post" class="d-inline delete-form" data-id="{{ $item->id }}">
+                                    <form action="{{ route('syllabus.destroy', $item->id) }}" method="post" class="d-inline delete-form" data-id="{{ $item->id }}">
                                         @csrf
                                         @method('DELETE')
                                         <button type="button" class="btn btn-sm btn-danger delete-btn h-100" data-id="{{ $item->id }}">

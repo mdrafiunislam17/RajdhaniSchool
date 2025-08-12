@@ -14,11 +14,11 @@
             class="absolute inset-0 w-full h-full object-cover -z-[1] pointer-events-none" />
 
         <div class="relative z-10 mx-[19.71%]">
-            <h1 class="font-semibold text-[clamp(35px,6vw,56px)] text-white">Teacher Details</h1>
+            <h1 class="font-semibold text-[clamp(35px,6vw,56px)] text-white">Teacher & Employee Details</h1>
             <ul class="flex items-center justify-center gap-[10px] text-white">
                 <li><a href="{{route('front.index')}}" class="text-edyellow">Home</a></li>
                 <li><span class="text-[12px]"><i class="fa-solid fa-angle-double-right"></i></span></li>
-                <li>Teacher Details</li>
+                <li>Teacher & Employee  Details</li>
             </ul>
         </div>
 

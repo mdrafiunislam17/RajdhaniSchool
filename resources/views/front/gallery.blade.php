@@ -5,7 +5,7 @@
 @section('content')
     <main>
         <!-- BREADCRUMB SECTION START -->
-        <section class="relative z-[1] overflow-hidden text-center pt-[327px] pb-[158px]">
+        {{-- <section class="relative z-[1] overflow-hidden text-center pt-[327px] pb-[158px]">
             <img src="{{ asset('uploads/' . $settings['SETTING_PAGE_BANNER']) }}"
                  alt="Breadcrumb Background"
                  class="absolute inset-0 w-full h-full object-cover -z-[1] pointer-events-none" />
@@ -24,6 +24,26 @@
                      class="absolute -z-[1] pointer-events-none bottom-[34px] left-0 xl:left-auto xl:right-[90%]">
                 <img src="{{ asset('assets/img/breadcrumb-vector-2.svg') }}" alt="vector"
                      class="absolute -z-[1] pointer-events-none bottom-0 right-0 xl:right-auto xl:left-[60%]">
+            </div>
+        </section> --}}
+
+         <section class="relative z-[1] overflow-hidden text-center pt-[327px] pb-[158px]">
+            <img src="{{ asset("uploads/" . $settings["SETTING_PAGE_BANNER"]) }}"
+                alt="Breadcrumb Background"
+                class="absolute inset-0 w-full h-full object-cover -z-[1] pointer-events-none" />
+
+            <div class="relative z-10 mx-[19.71%]">
+                <h1 class="font-semibold text-[clamp(35px,6vw,56px)] text-white">Gallery Details </h1>
+                <ul class="flex items-center justify-center gap-[10px] text-white">
+                    <li><a href="{{route('front.index')}}" class="text-green">Home</a></li>
+                    <li><span class="text-[12px]"><i class="fa-solid fa-angle-double-right"></i></span></li>
+                    <li>Gallery Details </li>
+                </ul>
+            </div>
+
+            <div class="vectors">
+                <img src="{{asset('assets/img/breadcrumb-vector-1.svg')}}" alt="vector" class="absolute -z-[1] pointer-events-none bottom-[34px] left-0 xl:left-auto xl:right-[90%]">
+                <img src="{{asset('assets/img/breadcrumb-vector-2.svg')}}" alt="vector" class="absolute -z-[1] pointer-events-none bottom-0 right-0 xl:right-auto xl:left-[60%]">
             </div>
         </section>
         <!-- BREADCRUMB SECTION END -->

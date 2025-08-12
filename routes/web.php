@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\classController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\NoticeController;
+use App\Http\Controllers\Admin\SyllabusController;
 use App\Http\Controllers\Admin\ResultController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SayinController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\ContactController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -48,6 +50,12 @@ Route::get('blog',[FrontController::class,'blog'])->name('blog');
 Route::get('blog_details/{title?}',[FrontController::class,'blogDetails'])->name('blogDetails');
 Route::get('sayings',[FrontController::class,'sayings'])->name('sayings');
 Route::get('saying_details/{name?}',[FrontController::class, 'sayingDetails'])->name('sayingDetails');
+Route::get('contactUS',[FrontController::class, 'contactUS'])->name('frontContact');
+Route::get('admissionOnline',[FrontController::class, 'admissionOnline'])->name('frontadmissionOnline');
+Route::get('students',[FrontController::class, 'students'])->name('students');
+Route::get('syllabui',[FrontController::class,'syllabui'])->name('syllabui');
+Route::get('syllabui_details/{title?}',[FrontController::class,'syllabuiDetails'])->name('syllabuiDetails');
+
 
 Auth::routes();
 
@@ -60,11 +68,14 @@ Route::resource('class',classController::class);
 Route::resource('admission',AdmissionController::class);
 Route::resource('student',StudentController::class);
 Route::resource('notice',NoticeController::class);
+Route::resource('syllabus',SyllabusController::class);
+
 Route::resource('result',ResultController::class);
 Route::resource("blogs", BlogController::class);
 Route::resource("events", EventController::class);
 Route::resource('review',ReviewController::class);
 Route::resource('saying',SayinController::class);
+Route ::resource('contact', ContactController::class);
 Route::get("settings", [SettingController::class, "index"])->name("setting.index");
 Route::put("settings", [SettingController::class, "update"])->name("setting.update");
 

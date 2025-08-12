@@ -40,7 +40,7 @@
                 <img src="{{ asset('uploads/' . $settings['SETTING_SITE_LOGO']) }}" alt="logo" class="h-[50px]" />
                 <span class="ml-2 text-base font-semibold">
                 <span style="color: #dc2626;">RAJDHANI </span>
-                <span style="color: #16a34a;"> SCHOOL AND COLLEGE</span>
+                <span style="color: #16a34a;">  SCHOOL AND COLLEGE</span>
 
                 </span>
             </a>
@@ -61,15 +61,17 @@
 {{--                                <li><a href="index-2.html">Home 02</a></li>--}}
 {{--                            </ul>--}}
                         </li>
-                        <li><a href="{{route('aboutUs')}}">About us</a></li>
+                        <li><a href="{{route('aboutUs')}}">Our School</a></li>
                          <li><a href="{{route('sayings')}}">Saying & Member</a></li>
 
                         <li class="has-sub-menu relative">
                             <a role="button">Pages</a>
 
                             <ul class="ed-header-submenu">
-                                <li><a href="{{route('teachers')}}">Teachers</a></li>
+                                <li><a href="{{route('teachers')}}">Teachers & Employee</a></li>
+                                <li><a href="{{route('students')}}">Student</a></li>
                                 <li><a href="{{route('notices')}}">Notices</a></li>
+                                 <li><a href="{{route('syllabui')}}">Syllabui</a></li>
                                 <li><a href="{{route('event')}}">Events</a></li>
                                 <li><a href="{{route('gallerys')}}">Gallery</a></li>
                                 {{-- <li><a href="#">FAQ</a></li> --}}
@@ -86,14 +88,14 @@
 {{--                                <li><a href="news-details.html">News Details</a></li>--}}
 {{--                            </ul>--}}
                         </li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="{{route('frontContact')}}">Complaints</a></li>
                     </ul>
                 </div>
 
                 <!-- right actions -->
                 <div class="flex items-center gap-x-[60px] xxs:gap-[30px]">
 
-                    <a href="#" class="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]" style="background-color: green">apply now</a>
+                    <a href="{{route('frontadmissionOnline')}}" class="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]" style="background-color: green">apply now</a>
                 </div>
             </div>
 

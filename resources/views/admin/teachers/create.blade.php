@@ -7,9 +7,9 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Create Teacher</h1>
+        <h1 class="h3 mb-0 text-gray-800">Create Teacher & Employee</h1>
         <a href="{{ route('teacher.index') }}" class="btn btn-sm btn-primary shadow-sm">
-            <i class="fas fa-eye fa-sm text-white-50"></i> All Teachers
+            <i class="fas fa-eye fa-sm text-white-50"></i> All Teachers & Employee
         </a>
     </div>
 

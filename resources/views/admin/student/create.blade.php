@@ -50,9 +50,9 @@
                                 <select name="section" id="section" class="form-control selectpicker">
                                     <option value="">-- Select Section --</option>
                                     <option value="N/A" {{ old('section') == 'N/A' ? 'selected' : '' }}>N/A</option>
-                                    <option value="A" {{ old('section') == 'A' ? 'selected' : '' }}>Section A</option>
-                                    <option value="B" {{ old('section') == 'B' ? 'selected' : '' }}>Section B</option>
-                                    <option value="C" {{ old('section') == 'C' ? 'selected' : '' }}>Section C</option>
+                                    <option value="A" {{ old('section') == 'A' ? 'selected' : '' }}> A</option>
+                                    <option value="B" {{ old('section') == 'B' ? 'selected' : '' }}> B</option>
+                                    <option value="C" {{ old('section') == 'C' ? 'selected' : '' }}> C</option>
                                 </select>
                             </div>
 

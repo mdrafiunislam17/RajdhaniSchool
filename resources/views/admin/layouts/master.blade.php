@@ -18,7 +18,7 @@
     {{-- <link rel="canonical" href="{{ url()->current() }}"> --}}
 
     <title>@yield("title", "Admin")</title>
-
+ <link rel="shortcut icon" href="{{ asset("uploads/" . $settings["SETTING_SITE_FAVICON"] ?? 'favicon.ico') }}" type="image/x-icon">
     {{-- Existing links --}}
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700,900" rel="stylesheet">

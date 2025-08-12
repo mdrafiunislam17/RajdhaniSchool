@@ -8,7 +8,7 @@
                 <img src="{{ asset("storage/uploads/" . $settings["SETTING_SITE_LOGO"]) }}" class="w-75" alt="">
 
             </div>
-            <h6 class="sidebar-brand-text mx-3 mt-2 font-weight-bold" title=" sc-edu-bd.com"> sc-edu-bd.com</h6>
+            <h6 class="sidebar-brand-text mx-3 mt-2 font-weight-bold" title=" RAJDHANI SCHOOL AND COLLEGE"> RAJDHANI SCHOOL AND COLLEGE</h6>
         </a>
     </li>
 
@@ -57,7 +57,7 @@
         request()->routeIs('teacher.edit') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('teacher.index') }}">
              <i class="fas fa-fw fa-chalkboard-teacher"></i>
-            <span>Teacher</span>
+            <span>Teacher & Employee</span>
         </a>
     </li>
 
@@ -125,6 +125,18 @@
 
     </li>
 
+     <li class="nav-item }}
+        request()->routeIs('syllabus.index') ||
+        request()->routeIs('syllabus.create') ||
+        request()->routeIs('syllabus.show') ||
+        request()->routeIs('syllabus.edit') ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('syllabus.index') }}">
+            <i class="fas fa-bullhorn"></i>
+            <span> Syllabus </span>
+        </a>
+
+    </li>
+
 
 
     <li class="nav-item }}
@@ -179,7 +191,20 @@
 
     </li>
 
- <li class="nav-item {{
+      <li class="nav-item {{
+    request()->routeIs("contact.index") ||
+    request()->routeIs("contact.create") ||
+    request()->routeIs("contact.show") ||
+    request()->routeIs("contact.edit")
+    ? "active" : "" }}">
+        <a class="nav-link" href="{{ route("contact.index") }}">
+            <i class="fas fa-envelope"></i>
+            <span>Complaints</span>
+        </a>
+    </li>
+
+
+ {{-- <li class="nav-item {{
     request()->routeIs("review.index") ||
     request()->routeIs("review.create") ||
     request()->routeIs("review.show") ||
@@ -190,5 +215,5 @@
         <span>Reviews</span>
     </a>
 
-    </li>
+    </li> --}}
 </ul>

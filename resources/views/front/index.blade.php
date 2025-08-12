@@ -172,7 +172,7 @@
 
                     <!-- right -->
                     <div class="max-w-[54%] md:max-w-full">
-                        <h6 class="text-green text-[18px] font-semibold uppercase tracking-wide mb-2">About us</h6>
+                        <h6 class="text-green text-[18px] font-semibold uppercase tracking-wide mb-2">Our School</h6>
 
                         <h2 class="text-green text-[25px] mb-[6px] font-bold relative inline-block">
                             {{ $about->title }}
@@ -386,7 +386,7 @@
                         <div class="p-[40px] pr-0 lg:pr-[40px] text-center">
                             <img src="{{asset('assets/img/Admission.png')}}" alt="form image" class="mx-auto drop-shadow-[0_4px_30px_rgba(0,0,0,0.1)] mb-[17px]">
                             <h5 class="text-[20px] text-edblue mb-[28px]">Free  Admission Online Form</h5>
-                            <a href="#" download class="ed-btn" style="background-color: green">apply now</a>
+                            <a href="{{route('frontadmissionOnline')}}" download class="ed-btn" style="background-color: green">apply now</a>
                         </div>
                     </div>
 
@@ -705,11 +705,11 @@
                         <div class="bg-white flex lg:flex-col items-start gap-x-[20px] gap-y-[10px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] rounded-[20px] p-[30px] xxs:p-[20px]">
 
                             <!-- date -->
-                            <div class="bg-edyellow rounded-[10px] font-medium text-[16px] text-black inline-block uppercase overflow-hidden text-center shrink-0">
+                            <div class="bg-red rounded-[10px] font-medium text-[16px] text-black inline-block uppercase overflow-hidden text-center shrink-0">
                                 <span class="bg-edpurple text-white text-[20px] block py-[7px] px-[30px] rounded-[10px]">
                                     {{ $eventDate->format('Y') }}
                                 </span>
-                                <span class="px-[15px] p-[10px] block leading-[1.44] font-semibold">
+                                <span class="bg-red px-[15px] p-[10px] block leading-[1.44] font-semibold">
                                     {{ $eventDate->format('d') }}
                                     <span class="block">{{ $eventDate->format('M') }}</span>
                                 </span>
@@ -765,9 +765,9 @@
                             $date = \Carbon\Carbon::parse($item->posted_on);
                         @endphp
 
-                        <div class="bg-white absolute left-[20px] bottom-0 translate-y-[50%] rounded-[10px] font-bold text-[14px] text-black inline-block uppercase overflow-hidden text-center shadow-[0_4px_30px_rgba(0,0,0,0.08)]">
-                            <span class="bg-edyellow text-white block py-[3px] rounded-[10px]">{{ $date->format('d') }}</span>
-                            <span class="px-[11px] py-[2px] block">{{ $date->format('F') }}</span>
+                        <div class="bg-red absolute left-[20px] bottom-0 translate-y-[50%] rounded-[10px] font-bold text-[14px] text-black inline-block uppercase overflow-hidden text-center shadow-[0_4px_30px_rgba(0,0,0,0.08)]">
+                            <span class="bg-edpurple text-white block py-[3px] rounded-[10px]">{{ $date->format('d') }}</span>
+                            <span class=" bg-red px-[11px] py-[2px] block">{{ $date->format('F') }}</span>
                         </div>
                     </div>
 
