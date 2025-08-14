@@ -55,7 +55,8 @@ Route::get('admissionOnline',[FrontController::class, 'admissionOnline'])->name(
 Route::get('students',[FrontController::class, 'students'])->name('students');
 Route::get('syllabui',[FrontController::class,'syllabui'])->name('syllabui');
 Route::get('syllabui_details/{title?}',[FrontController::class,'syllabuiDetails'])->name('syllabuiDetails');
-
+Route::get('results',[FrontController::class,'results'])->name('results');
+Route::get('result_details/{title?}',[FrontController::class,'resultDetails'])->name('resultDetails');
 
 Auth::routes();
 

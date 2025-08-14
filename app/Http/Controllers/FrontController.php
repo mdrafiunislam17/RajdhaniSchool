@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\Notice;
+use App\Models\Result;
 use App\Models\Saying;
 use App\Models\Setting;
 use App\Models\Slider;
@@ -259,7 +260,7 @@ public function syllabui(){
 
         $syllabus = Syllabus::where('status', 1)->get();
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
-        $notices  =   Notice::latest()->take(3)->get();
+        $notices  =   Notice::all();
         return view('front.syllabui', compact('syllabus','settings','notices'));
     }
 
@@ -269,6 +270,25 @@ public function syllabui(){
         $settings = Setting::query()->pluck("value", "setting_name")->toArray();
         $notices  =   Notice::latest()->take(3)->get();
         return view('front.syllabuiDetails', compact('syllabus','settings','notices'));
+    }
+
+
+
+    public function results(){
+
+
+        $result = Result::where('status', 1)->get();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        $notices  =   Notice::latest()->take(3)->get();
+        return view('front.results', compact('result','settings','notices'));
+    }
+
+
+    public function resultDetails($title = null){
+        $result = Result::where('title', $title)->firstOrFail();
+        $settings = Setting::query()->pluck("value", "setting_name")->toArray();
+        $notices  =   Notice::latest()->take(3)->get();
+        return view('front.resultDetails', compact('result','settings','notices'));
     }
 
 

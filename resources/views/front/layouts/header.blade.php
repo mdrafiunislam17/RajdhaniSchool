@@ -93,9 +93,8 @@
                                  <li><a href="{{route('syllabui')}}">Syllabui</a></li>
                                 <li><a href="{{route('event')}}">Events</a></li>
                                 <li><a href="{{route('gallerys')}}">Gallery</a></li>
-                                {{-- <li><a href="#">FAQ</a></li> --}}
-{{--                                <li><a href="coming-soon.html">Coming Soon Page</a></li>--}}
-{{--                                <li><a href="404.html">Error 404</a></li>--}}
+                                <li><a href="{{route('results')}}">Results</a></li>
+
                             </ul>
                         </li>
                         <li class="has-sub-menu relative">
