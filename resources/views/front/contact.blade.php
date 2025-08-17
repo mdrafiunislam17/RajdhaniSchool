@@ -63,7 +63,7 @@
 
                                 <div class="txt">
                                     <span class="font-normal">Call Us 7/24</span>
-                                    <h4 class="{{asset('font-medium text-[24px] xxs:text-[22px]')}}"><a href="tel:{{ $settings["CONTACT_PHONE"] }}">{{ $settings["CONTACT_PHONE"] }}</a></h4>
+                                    <h4 class="{{asset('font-medium text-[24px] xxs:text-[22px]')}}"><a href="#">{!! $settings["CONTACT_PHONE"] !!}</a></h4>
                                 </div>
                             </div>
 
@@ -75,7 +75,7 @@
 
                                 <div class="txt">
                                     <span class="font-normal">Make a Eamil</span>
-                                    <h4 class="font-medium text-[24px] xxs:text-[22px]"><a href="mailto:{{ $settings["CONTACT_EMAIL"] }}">{!! $settings["CONTACT_EMAIL"] !!}</a></h4>
+                                    <h4 class="font-medium text-[24px] xxs:text-[22px]"><a href="#">{!! $settings["CONTACT_EMAIL"] !!}</a></h4>
                                 </div>
                             </div>
 
@@ -87,7 +87,7 @@
 
                                 <div class="txt">
                                     <span class="font-normal">Location</span>
-                                    <h4 class="font-medium text-[24px] xxs:text-[22px]">{{ $settings["CONTACT_ADDRESS"] }}</h4>
+                                    <h4 class="font-medium text-[24px] xxs:text-[22px]">{!! $settings["CONTACT_ADDRESS"] !!}</h4>
                                 </div>
                             </div>
                         </div>

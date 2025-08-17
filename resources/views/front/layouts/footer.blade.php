@@ -9,12 +9,12 @@
                     <img src="{{ asset('uploads/' . $settings['SETTING_SITE_LOGO']) }}" alt="logo" style="height: 100px">
                 </a>
                 <p class="text-[#D9D9D9] mb-[19px]">
-                   {{ $settings["CONTACT_ADDRESS"] }}</p>
+                   {!! $settings["CONTACT_ADDRESS"] !!}</p>
 
                 <ul class="space-y-[17px]">
                     <li class="flex items-center gap-[8px]">
                         <span class="icon"><img src="{{asset('assets/img/call-icon-yellow.svg')}}" alt="icon"></span>
-                        <a href="tel:{{ $settings["CONTACT_PHONE"] }}" class="hover:text-edyellow">{{ $settings["CONTACT_PHONE"] }}</a>
+                        <a href="#" class="hover:text-edyellow">{!! $settings["CONTACT_PHONE"] !!}</a>
                     </li>
 
                     <li class="flex items-center gap-[8px]">
@@ -79,7 +79,7 @@
 
         <!-- footer bottom -->
         <div class="flex flex-wrap items-center justify-between gap-[15px] pt-[20px] pb-[50px] text-[#d9d9d9]">
-            <p>&copy; All Copyright &copy; {{ now()->year }} by <a href="{{url('https://github.com/mdrafiunislam17')}}" target="_blank">rafiun</a></p>
+            <p>&copy; All Copyright &copy; {{ now()->year }} by <a href="{{url('https://github.com/mdrafiunislam17')}}" target="_blank"></a></p>
 
             {{-- <div class="flex flex-wrap gap-[40px] xxs:gap-[15px]">
                 <a href="#" class="hover:text-edyellow">Terms & Conditions</a>
